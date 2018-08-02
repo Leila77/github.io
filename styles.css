@@ -1,0 +1,134 @@
+body{
+	background-color: pink;
+}
+
+header{
+	text-align: center;
+    
+
+
+
+}
+
+footer{
+	text-align: center;
+	font-size: 10px;
+	padding-top:20px;
+
+}
+
+H3{
+	font-size: 15px;
+
+	
+}
+
+
+a{
+	color:white;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	
+
+}
+
+a:hover{
+	color:black;
+	text-decoration-line: overline underline;
+
+}
+
+a:visited{
+	color:white;
+
+}
+
+#newContainer{
+	background-color: white;
+	opacity: 0.9;
+	width:80%;
+	margin:auto;
+	border-style: dotted;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+
+}
+
+#new{
+	font-size:13px;
+	
+}
+
+#mainContainer{
+	
+	
+
+	width: 50%;
+	height: 70vh;
+	margin:auto;
+	
+	
+
+}
+
+#songList{
+	background-color: white;
+	opacity: 0.8;
+	padding: 20px;
+	font-size: 14px;
+	line-height: 1.8;
+	overflow: auto;
+	height: 80%;
+	margin-bottom: 20px;
+
+
+
+	
+
+}
+
+button{
+	background-color: lightyellow;
+	color: black;
+	border-style: none;
+	width:30%;
+	height:30px;
+	margin-bottom:20px;
+	font-weight: bold;
+
+
+}
+
+button:hover{
+	background-color: lightgreen;
+	color:black;
+	transition:.7s;
+
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: lightyellow; 
+    border-radius: 15px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lightgreen; 
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: yellow; 
+}
+
+
