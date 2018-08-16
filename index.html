@@ -284,7 +284,7 @@
 			
 			var str = "";
 			var keywords = "";
-			keywords = document.getElementById("search").value;
+			keywords = document.getElementById("search").value.toLowerCase();
 			
 			var alert = "";
 			var singerStr = "";
@@ -306,18 +306,20 @@
 
 			arr.forEach(function(arr){
 				titleStr = arr.split('-')[0];
+				_titleStr = arr.split('-')[0].toLowerCase();
 				singerStr = arr.split('-')[1];
+				_singerStr = arr.split('-')[1].toLowerCase();
 				str += arr.toString();
-				if(titleStr.includes(keywords) == true || singerStr.includes(keywords) == true){
-					alert += titleStr + " " + singerStr+ "\n";
+				if(_titleStr.includes(keywords) == true || _singerStr.includes(keywords) == true){
+					alert += titleStr + " — " + singerStr+ "\n";
 
 				}
 
 		});
 
-			if(str.toString().includes(keywords.toString()) != true){ 
+			if(str.toString().toLowerCase().includes(keywords.toString().toLowerCase()) != true){ 
 					
-					alert = "木有找到诶QAQ"
+					alert = "木有找到诶 QAQ \n有可能是忘了加上！快去问问老糖会不会唱~"
 					
 				}
 			window.alert(alert);
