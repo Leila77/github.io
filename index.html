@@ -86,6 +86,7 @@
 
 <footer>
 	@考拉 2018 🚀悄咪咪祝老糖快点火火火~！
+	<button id="copy" onclick="magic();">给老糖的魔法摁扭</button>
 </footer>
 
 
@@ -370,6 +371,79 @@
 }
 
 
+///////////////////////////////给老糖的魔法按钮/////////////////////////////
+
+	function magic(){
+		var temptitle = "";
+		var title ="";
+		var i = 0;
+		var length = arr.length;
+		
+
+	console.log(length);
+
+  	arr.forEach(function(arr){
+
+  		console.log(i);
+
+  		if(i < length - 1){
+		temptitle = arr.toString().split('-')[0];
+		
+			title += temptitle +  " 、 ";
+			i++;
+		}else{
+  			temptitle = arr.toString().split('-')[0];
+		    title += temptitle;
+		    console.log("last one!!!!!!!");
+		}
+
+
+
+		});
+
+
+  	var text = "<p style=\"color: #333333; font-size: 15px; padding-left: 20px;\"><strong>歌单持续更新中&hellip;&hellip;</strong></p>\
+<div style=\"overflow: auto; height: 160px; width: 90%; background-color: #333333; color: #f2f2f2; font-size: 13px; margin: auto; padding: 10px 20px; line-height: 1.6;\">" + title +"</div>\
+<p><img style=\"height: 80px; margin: auto; display: block;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></p>\
+<p style=\"text-align: center;\">感谢大家的陪伴 &gt; &lt;</p><p style=\"text-align: center;\">入群Link 665380472</p>"
+
+
+
+
+    var dummy = document.createElement("input");
+    document.body.appendChild(dummy);
+    dummy.setAttribute('value', text);
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    alert("复制成功惹~");
+
+}
+
+  
+
+  // // Create a dummy input to copy the string array inside it
+  // var dummy = document.createElement("input");
+
+  // // Add it to the document
+  // document.body.appendChild(dummy);
+
+  // // Set its ID
+  // dummy.setAttribute("title","songTitle");
+
+  // // Output the array into it
+  // document.getElementById("songTitle").value = result;
+
+  // // Select it
+  // dummy.select();
+
+  // // Copy its contents
+  // document.execCommand("copy");
+
+  // // Remove it as its not needed anymore
+  // document.body.removeChild(dummy);
+
+	
 
 
 	
