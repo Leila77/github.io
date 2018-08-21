@@ -168,12 +168,7 @@
 		
 
 		arr.sort(function(a,b){
-			// console.log(a);
-
-			// pinyin = a.toString().charAt(0);
-			// console.log("a的charAt 0 = " + pinyin);
-			// console.log("pinyin的charCodeAt 0 = " + charCode);
-
+			
 		 	return a.localeCompare(b,'zh-CN')
 		 });
 	};
@@ -188,15 +183,59 @@
 		var arrToStr = "";
 		var temptitle = "";
 		var tempsinger = "";
+		var letter;
+		
 
-		arr.forEach(function(arr){
+
+		var segList = pySegSort(arr).slice();
+		
+		//整个list ：segList
+		//a里的内容 ： segList[0].data
+		//a里的第一首歌： segList[0].data[0]
+
+		console.log(segList);
+		
+
+
+		for(i = 0; i < segList.length; i ++){
+			// console.log("i : " + i + " letter : " + segList[i].letter);
+			
+	
+			letter = segList[i].letter.toUpperCase();
+			console.log("segList[i] = " + segList[i].data);
+			arrToStr += letter + "<br>" ;
+			// temptitle = segList[i].data;
+
+			segList[i].data.forEach(function(arr){
+				temptitle += arr.split('-')[0] + divider + arr.split('-')[1] + "<br>";
+
+			});
+
+			arrToStr+=temptitle + "<br>";
+			
+
+				
+		};
+		console.log("arrToStr = " + arrToStr);
+		
   
-		temptitle = arr.toString().split('-')[0];
-		// console.log("temptitle = " + temptitle);
-		tempsinger = arr.toString().split('-')[1];
-		arrToStr += temptitle + divider +  "<b>" + tempsinger + "</b>" +  "<br>";
+		// temptitle = arr.toString().split('-')[0];
+		// // console.log("temptitle = " + temptitle);
+		// tempsinger = arr.toString().split('-')[1];
+		// arrToStr += temptitle + divider +  "<b>" + tempsinger + "</b>" +  "<br>";
 
-		});
+		// });
+			////////////////////////////////////////////////
+
+
+		// arr.forEach(function(arr){
+  
+		// temptitle = arr.toString().split('-')[0];
+		// // console.log("temptitle = " + temptitle);
+		// tempsinger = arr.toString().split('-')[1];
+		// arrToStr += temptitle + divider +  "<b>" + tempsinger + "</b>" +  "<br>";
+
+		// });
 
 		document.getElementById("songList").innerHTML = arrToStr;
 	}
@@ -422,26 +461,33 @@
 
   
 
-  // // Create a dummy input to copy the string array inside it
-  // var dummy = document.createElement("input");
+////////////////////////按拼音首字母分类///////////////////////////
 
-  // // Add it to the document
-  // document.body.appendChild(dummy);
-
-  // // Set its ID
-  // dummy.setAttribute("title","songTitle");
-
-  // // Output the array into it
-  // document.getElementById("songTitle").value = result;
-
-  // // Select it
-  // dummy.select();
-
-  // // Copy its contents
-  // document.execCommand("copy");
-
-  // // Remove it as its not needed anymore
-  // document.body.removeChild(dummy);
+function pySegSort(arr) {
+    if(!String.prototype.localeCompare)
+        return null;
+     
+    var letters = "*abcdefghjklmnopqrstwxyz".split('');
+    var zh = "阿八嚓哒妸发旮哈讥咔垃麻拏噢妑七呥扨它穵夕丫帀".split('');
+     
+    var segs = [];
+    var curr;
+    letters.forEach(function(item,i){
+        curr = {letter: item, data:[]};
+        arr.forEach(function(item2){
+            if((!zh[i-1] || zh[i-1].localeCompare(item2) <= 0) && item2.localeCompare(zh[i]) == -1) {
+                curr.data.push(item2);
+            }
+        });
+        if(curr.data.length) {
+            segs.push(curr);
+            curr.data.sort(function(a,b){
+                return a.localeCompare(b);
+            });
+        }
+    });
+    return segs;
+}
 
 	
 
