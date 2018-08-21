@@ -60,12 +60,14 @@ footer{
 H1{
 
 	font-size: 20px;
+	color:#333333;
 
 }
 
 H3{
 	font-size: 12px;
 	line-height: 1.1;
+	color:#333333;
 }
 
 p{
@@ -84,7 +86,7 @@ a{
 	font-size: 90%;
 	font-weight: bold;
 	text-decoration-line: none;
-	background-color:black;
+	background-color:#333333;
 	
 	color: white;
 
@@ -118,7 +120,7 @@ a:visited{
 
 #new{
 	font-size:13px;
-	color: black;
+	color:#333333;
 	line-height: 1.5;
 	
 }
@@ -150,12 +152,13 @@ a:visited{
 	margin-bottom: 20px;
 	color:lightpink;
 	
+	
 }
 
 
 button{
 	background-color: lightyellow;
-	color: 	black;
+	color:#333333;
 	border-style: none;
 	width:25%;
 	height:30px;
@@ -176,9 +179,12 @@ button:hover{
 	height:25px;
 	width:30%;
 	margin-right:4px;
+	background-color:#f2f2f2;
+
 }
 #submit{
 	width:10%;
+	color:#333333;
 }
 
 
