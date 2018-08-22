@@ -61,6 +61,21 @@ body{
   float: right;
 }
 
+
+
+.header #liveSchedule{
+	border-style: solid;
+	border-color:#333333;
+	border-width:1px;
+
+	font-size: 10px;
+	color:#333333;
+	margin-bottom: 0;
+
+}
+
+
+
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -197,10 +212,6 @@ p{
 	padding-right:4px;
 }
 
-
-#linkToBili{
-	float:right;
-}
 
 
 a{	
@@ -390,3 +401,35 @@ button:hover{
 }
 
 
+
+
+#schedule{
+	margin:50px auto;
+	width:50%;
+	min-width:500px;
+	background-color:white;
+	height:50vh;
+	border-radius: 4px;
+	border-style: ridge;
+	border-color:#f2f2f2;
+	border-width: 5px;
+	background-image: url("老糖与狗.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+#livePortal{
+	background-color: inherit;
+	width:300px;
+	margin-top: 10px;
+}
+
+#livePortal a{
+	background-color: #f2f2f2;
+	font-size: 20px;
+	color:#333333;
+	padding:5px;
+	border-radius: 4px;
+	width:100%;
+
+}
