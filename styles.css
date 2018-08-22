@@ -1,29 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *{
 	font-family: Helvetica, Georgia,"Microsoft Yahei","微软雅黑",  STXihei, "华文细黑", sans-serif;
 	box-sizing: border-box;
@@ -36,8 +11,6 @@ body{
 	margin: 0;
 
 }
-
-
 
 
 /*  -------------responsive header-------------*/
@@ -68,8 +41,8 @@ body{
 }
 
 .header a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #f2f2f2;
+  color: #333333;
 }
 
 .header a.active {
@@ -124,7 +97,7 @@ footer{
 
 H1{
 	font-size: 20px;
-	color:#332628;
+	color:#333333;
 	display:inline-block;
 	position:absolute;
 	left:20px;
