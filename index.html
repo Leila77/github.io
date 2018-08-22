@@ -23,19 +23,36 @@
 
 <!---------------------------- header ---------------------------->
 
-<header>
+<!-- <header>
 	<H1>老糖的不完全歌单</H1>
-	<div id="linkToBili">
-		<img src="bili.png" alt="bili" height="21">
+	<div id="linkToBili" style="padding:2px 2px;">
+		<img src="bili.png" alt="bili" height="21"  >
 		<a target="_blank" href = "https://live.bilibili.com/5607874">B站直播传送门</a>
 
 	</div>
-</header>
+</header> -->
+
+
+
+<!----------------------试试~~~~~~~~~~~~~~~~------------------------------------->
+
+
+<div class="header">
+  <a class="logo">老糖的不完全歌单</a>
+  <div class="header-right">
+    <a class="active" href="#home">歌单</a>
+    <a href="#live">直播</a>
+
+  </div>
+</div>
+
+
+
 
 <!---------------------------- 新添加的歌们 ---------------------------->
 
 <div id = "newContainer">
-	<H3>::::: 新添加的歌们 :::::</H3>
+	<H3>✨ 新添加的歌们 ✨</H3>
 	<div id = "new"></div>
 </div>
 
@@ -43,11 +60,11 @@
 	<div id= "songListContainer">
 <!---------------------------- buttons ---------------------------->
 
-		<H3>老糖唱过的歌 [持续更新中……]</H3>
+		<p id="suisuinian">歌单还非常不完整，如果发现遗漏歌请戳我~~万分感谢！</p>
 		<div id = "buttons">
 			<button onclick="setContentSinger(simplifySinger());"> 歌手 </button>
 			<button onclick="sortByTitle();setContent();"> 歌名 </button>
-			<input id="search" placeholder="搜索一哈 > <"></input>
+			<input id="search" placeholder="歌名 or 歌手名"></input>
 			<button onclick="search();" id = "submit">搜索</button>
 		</div>
 
@@ -135,7 +152,7 @@
 
 	var newSongs = "";
 	for(i = 0 ; i < 9; i ++){
-		newSongs += " ❤ " + arr[i].split('-')[0] + divider + arr[i].split('-')[1] ;
+		newSongs +=  arr[i].split('-')[0] + divider + arr[i].split('-')[1] + " · "  ;
 	}
 
 	document.getElementById("new").innerHTML = newSongs;
@@ -164,9 +181,7 @@
 	////////////////////////////////////// 按歌名排序 ///////////////////////////////////////////
 
 	function sortByTitle(){
-		// var pinyin = "";
 		
-
 		arr.sort(function(a,b){
 			
 		 	return a.localeCompare(b,'zh-CN')
@@ -181,20 +196,14 @@
 		
 		var length = arr.length;
 		var arrToStr = "";
-		var temptitle = "";
-		var tempsinger = "";
+		var temp = "";
 		var letter;
 		
-
-
 		var segList = pySegSort(arr).slice();
 		
 		//整个list ：segList
 		//a里的内容 ： segList[0].data
 		//a里的第一首歌： segList[0].data[0]
-
-		// console.log(segList);
-		
 
 
 		for(i = 0; i < segList.length; i ++){
@@ -203,15 +212,17 @@
 	
 			letter = segList[i].letter.toUpperCase();
 			// console.log("segList[i] = " + segList[i].data);
-			arrToStr += "<p style=\"font-size:17px; color:pink; background-color: #f2f2f2; width:17px; font-weight:bold; \">" + letter + "</p>" ;
-			// temptitle = segList[i].data;
+			arrToStr += "<p style=\"font-size:17px; color:pink; background-color: #f2f2f2; width:23px; font-weight:bold;border-radius:4px; text-align:center; \">" + letter + "</p>" ;
+			// temp = segList[i].data;
 
 			segList[i].data.forEach(function(arr){
-				temptitle += arr.split('-')[0] + divider + arr.split('-')[1] + "<br>";
+				temp += arr.split('-')[0] + divider + arr.split('-')[1] + "<br>";
 
 			});
 
-			arrToStr+=temptitle + "<br>";
+
+			arrToStr += temp + "<br>";
+			temp = "";
 			
 
 				
@@ -278,9 +289,9 @@
 			}else{ //如果歌手不在array里
 
 				if ( i == 0 ){
-					str.push("<b>" + "[ " + singerStr + " ]" + "</b>"); //加入str 没有回车 
+					str.push("<p style=\"font-size:13px; color:pink; background-color: #f2f2f2; height:25px; width:100px;padding:6px; display:inline-block;font-weight:bold;border-radius:4px; \">" + singerStr + " </p>" ); //加入str 没有回车 
 				}else{
-					str.push("<br><br><b>" + "[ " + singerStr + " ]" + "</b>"); //加入str 回车~
+					str.push("<br><p style=\"font-size:13px; color:pink; background-color: #f2f2f2; height:25px; width:100px;padding:6px; display:inline-block;font-weight:bold;border-radius:4px; \">" + singerStr + " </p>" ); //加入str 回车~
 				}
 
 				if(str.toString().includes(nextSingerStr) == false){
@@ -331,10 +342,6 @@
 			var titleStr = "";
 
 			console.log(keywords);
-
-
-
-
 
 
 
@@ -425,7 +432,7 @@
 
 			
 			letter = segList[i].letter.toUpperCase();
-			title += "<p style=\"font-size:17px; color:#333333; background-color: #f2f2f2; width:20px; font-weight:bold; display: inline-block; padding: 0px 5px; margin-right:5px; text-align:center; \">" + letter  +"</p>" ;
+			title += "<p style=\"font-size:17px; color:#333333; background-color: #f2f2f2; width:20px; font-weight:bold; display: inline-block; padding: 0px 5px; margin-right:5px; text-align:center;  \">" + letter  +"</p>" ;
 			// temptitle = segList[i].data;
 
 			var idx = 0 ;
