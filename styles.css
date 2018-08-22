@@ -152,11 +152,6 @@ a:hover {
 	transition: .5s;
 }
 
-
-a:visited{
-	color:white;
-}
-
 #newContainer{
 	background-color: inherit;
 	opacity: 0.9;
@@ -177,14 +172,11 @@ a:visited{
 	line-height: 1.5;
 }
 
-
-
 #mainContainer{
 	width: 95%;
 	height: 70vh;
 	margin:auto;
 }
-
 
 #songListContainer{
 	height: 70vh;
