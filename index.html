@@ -24,6 +24,7 @@
 
 
 <div class="header">
+	<div id = "headerContainer">
   <a class="logo">老糖的不完全歌单</a>
   <a class="logo" id="liveSchedule" href='https://live.bilibili.com/5607874' target='blank'></a>
 
@@ -31,6 +32,7 @@
     <a class="active" href="index.html">歌单</a>
     <a href="live.html">直播</a>
   </div>
+</div>
 
 </div>
 
@@ -51,11 +53,11 @@
 		<p id="suisuinian">歌单还非常不完整，如果发现遗漏歌请戳我~~万分感谢！</p>
 		
 		<div id = "buttons">
-			<div class="alignMiddle">
+			<div>
 				<button class="tab" onclick="sortByTitle();setContent();"> 歌名 </button>
 				<button class="tab" onclick="setContentSinger(simplifySinger());"> 歌手 </button>
 			</div>
-			<div class="alignMiddle">
+			<div>
 				<input id="search" placeholder="歌名 or 歌手名"></input>
 				<button onclick="search();" id = "submit">搜索</button>
 			</div>
@@ -218,24 +220,7 @@
 		};
 		// console.log("arrToStr = " + arrToStr);
 		
-  
-		// temptitle = arr.toString().split('-')[0];
-		// // console.log("temptitle = " + temptitle);
-		// tempsinger = arr.toString().split('-')[1];
-		// arrToStr += temptitle + divider +  "<b>" + tempsinger + "</b>" +  "<br>";
 
-		// });
-			////////////////////////////////////////////////
-
-
-		// arr.forEach(function(arr){
-  
-		// temptitle = arr.toString().split('-')[0];
-		// // console.log("temptitle = " + temptitle);
-		// tempsinger = arr.toString().split('-')[1];
-		// arrToStr += temptitle + divider +  "<b>" + tempsinger + "</b>" +  "<br>";
-
-		// });
 
 		document.getElementById("songList").innerHTML = arrToStr;
 	}
@@ -566,14 +551,10 @@ function getSchedule(){
 	}
 
 	result = "今天" + day + "！" + liveTime;
-
-
-
 	return result;
 
-
-
 }
+
 
 function setSchedule(){
 	var sche = getSchedule();

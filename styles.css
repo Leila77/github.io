@@ -17,8 +17,17 @@ body{
 .header {
   overflow: hidden;
   background-color: white;  
-  padding: 10px 10px;
+  padding: 10px 20px;
   color: #333333;
+  margin:auto;
+
+ }
+
+
+ .header #headerContainer{
+ 	max-width: 650px;
+ 	margin:auto;
+
  }
 
 
@@ -37,7 +46,7 @@ body{
 }
 
 .header a.logo {
-  font-size: 20px;
+  font-size: 1.2em;
   font-weight: bold;
   background:inherit;
 }
@@ -76,66 +85,72 @@ body{
 
 
 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: inline-block;
-    text-align: center;
-    width:48%;
-    margin:auto;
-  }
+@media screen and (max-width: 675px) {
 
-  .header a.logo{
-  	display:block;
-  	width:100%;
+	.header{
+		padding: 10px 10px;
+	}
+    .header a {
+    	float: none;
+    	display: inline-block;
+   	 	text-align: center;
+    	width:48%;
+    	margin:auto;
+    }
 
-  }
+    .header a.logo{
+  		display:block;
+  		width:100%;
+    }
 
-  .header-right {
-    float: none;
-  }
+    .header-right {
+    	float: none;
+    }
 
-  .tab{
-  	width:46%;
-
-  }
-
-  #buttons{
-  	width:94%;
-  	margin:5px auto;
-  }
-
- #buttons #search{
-  	width:70%;
-  }
-
- #buttons #submit{
-  	width:22%;
-  }
+    .tab{
+  		width:46%;
+  		height:40px;
 
 
-  #suisuinian{
-  	display: none;
-  }
+    }
 
-  footer #footer{
-  	display:none;
-  }
+    #buttons{
+  		width:94%;
+  		margin:5px auto;
 
-  footer #copy{
-  	display:none;
-  }
+    }
 
+ 	#buttons #search{
+  		width:70%;
+  		height:40px;
+    }
 
-
-
-  .alignMiddle{
- 	margin-left:2.5vw;
-
-  }
+ 	#buttons #submit{
+  		width:22%;
+  		height:40px;
+    }
 
 
+    #suisuinian{
+  		display: none;
+    }
 
+    footer #footer{
+  		display:none;
+    }
+
+    footer #copy{
+  		display:none;
+    }
+
+
+    .alignMiddle{
+ 		margin-left:2.5vw;
+    }
+
+    .logo #liveSchedule{
+  		margin-bottom: 15px;
+ 	}
 }
 
 
@@ -406,11 +421,11 @@ button:hover{
 #schedule{
 	margin:50px auto;
 	width:50%;
-	min-width:500px;
+	min-width:400px;
 	background-color:white;
-	height:50vh;
+	height:70vh;
 	border-radius: 4px;
-	border-style: ridge;
+	border-style: solid;
 	border-color:#f2f2f2;
 	border-width: 5px;
 	background-image: url("老糖与狗.png");
