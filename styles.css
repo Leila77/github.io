@@ -111,13 +111,12 @@ body{
   		width:46%;
   		height:40px;
 
-
     }
 
     #buttons{
   		width:94%;
   		margin:5px auto;
-
+  	
     }
 
  	#buttons #search{
@@ -297,7 +296,7 @@ a:hover {
 
 #buttons{
 	width:100%;
-	margin-left:2%;
+
 }
 
 
@@ -306,7 +305,7 @@ button{
 	background-color: lightyellow;
 	color:#333333;
 	border-style: none;
-	width:25%;
+	width:23%;
 	height:30px;
 	margin-bottom:13px;
 	margin-right:4px;
@@ -332,12 +331,14 @@ button:hover{
 	border-width:1px;
 	border-color:lightgreen;
 	padding:6px;
+	
 }
 
 #submit{
-	width:10%;
+	width:15%;
 	color:#333333;
 	border-radius: 4px;
+	display:inline;
 }
 
 #pendingContainer{
