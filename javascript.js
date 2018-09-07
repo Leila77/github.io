@@ -176,8 +176,8 @@
 
 
 			document.getElementById("songList").innerHTML = arrToStr;
-			var elem = document.getElementById("titleBtn");
-			elem.classList.add("active");
+			// var elem = document.getElementById("titleBtn");
+			// elem.classList.add("active");
 		}
 
 
