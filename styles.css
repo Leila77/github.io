@@ -151,6 +151,10 @@ body{
 
     }
 
+    #newContainer{
+    	min-width:80%;
+    }
+
 
     #suisuinian{
   		display: none;
@@ -328,7 +332,7 @@ a:hover {
 #newContainer{
 	background-color: inherit;
 	opacity: 0.9;
-	width:80%;
+	width:40%;
 	margin:auto;
 	border-style: solid;
 	margin-top: 10px;
@@ -340,7 +344,7 @@ a:hover {
 }
 
 #new{
-	font-size:13px;
+	font-size:14px;
 	color:white;
 	line-height: 1.5;
 }

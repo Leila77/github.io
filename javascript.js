@@ -92,8 +92,9 @@
 //////////////////////////////////// 显示最新的歌 ///////////////////////////////////////
 
 		var newSongs = "";
-		for(i = 0 ; i < 9; i ++){
-			newSongs +=  arr[i].split('-')[0] + divider + arr[i].split('-')[1] + " · "  ;
+		for(i = 0 ; i < 20; i ++){
+			newSongs +=  " ♡ " + arr[i].split('-')[0] + "&nbsp&nbsp&nbsp";
+			//+ "(" + arr[i].split('-')[1] + ")  "  
 		}
 
 		document.getElementById("new").innerHTML = newSongs;
