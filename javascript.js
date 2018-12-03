@@ -382,7 +382,7 @@
 
 		var text = "<div style=\"overflow: auto; height: 220px; width: 98%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;\"><p style=\"color: #333333; background-color: #f2f2f2; font-size: 15px; padding-left: 20px; display:block; width:180px;\"><strong>❤&nbsp;歌单持续更新中&hellip;&hellip;</strong></p>" + title +"</div>\
 		<p><img style=\"height: 80px; margin: auto; display: block;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></p>\
-		<p style=\"text-align: center;font-size:10px;\">感谢大家的陪伴 &gt; &lt;</p><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=06e5435f9776b7845974c13619bb8f6f33a6e7df157e84ed4b9dc53267f1c47f\" style=\"text-align:center;display:block;color:#333333;font-size:10px;margin-bottom:15px;\">戳我加群 665380472</p></a><a href=\"https://leila77.github.io/github.io/\";style=\"text-align: center; display:block; margin:auto; width:100px;background-color:#333333;color:#f2f2f2;text-decoration:none;font-weight:bold;font-size: 11px;padding:2px 2px; font-size:10px;\">一个神 ♂ 秘网站</a>";
+		<p style=\"text-align: center;font-size:10px;\">感谢大家的陪伴 &gt; &lt;</p><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=06e5435f9776b7845974c13619bb8f6f33a6e7df157e84ed4b9dc53267f1c47f\" style=\"text-align:center;display:block;color:#333333;font-size:10px;margin-bottom:15px;\">群 951162656</p></a><a href=\"https://leila77.github.io/github.io/\";style=\"text-align: center; display:block; margin:auto; width:100px;background-color:#333333;color:#f2f2f2;text-decoration:none;font-weight:bold;font-size: 11px;padding:2px 2px; font-size:10px;\">网页版歌单戳我</a>";
 
 
 
