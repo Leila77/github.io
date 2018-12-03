@@ -475,7 +475,7 @@
 		switch(dayNum) {
 			case 0:
 			day = "星期天";
-			liveTime = "下午4点直播~";
+			liveTime = "下午3点左右直播~具体看群消息";
 			break;
 
 			case 1:
@@ -490,27 +490,27 @@
 
 			case 3:
 			day = "星期三";
-			liveTime = "早上9点 & 下午4点都有直播噢~";
+			liveTime = "下午4点直播~";
 			break;
 
 			case 4:
 			day = "星期四";
-			liveTime = "下午4点直播~晚上10点半随缘!";
+			liveTime = "下午4点直播";
 			break;
 
 			case 5:
 			day = "星期五";
-			liveTime = "早上9点 & 下午4点都有直播噢~";
+			liveTime = "下午4点直播~";
 			break;
 
 			case 6:
 			day = "星期六";
-			liveTime = "下午4点直播~晚上10点半随缘!";
+			liveTime = "下午4点直播~";
 			break;
 
 		}
 
-		result = day + "(｡･ω･｡)" + liveTime;
+		result = "今天" + day + "(｡･ω･｡)" + liveTime;
 		return result;
 
 	}
