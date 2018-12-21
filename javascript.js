@@ -364,9 +364,9 @@
 
 			segList[i].data.forEach(function(arr){
 
-				if(idx === segList[i].data.length - 1){
-					temptitle += arr.split('-')[0];
-					console.log("idx === 最后一个" );
+				if(idx === segList[i].data.length - 1){     
+					temptitle += arr.split('-')[0];     
+				console.log("idx === 最后一个");
 
 				}else{
 					temptitle += arr.split('-')[0] + " 、 " ;
@@ -403,7 +403,61 @@
 ////////////////////////////// 魔法2号 /////////////////////////
 	function magic2(){
 
-		alert("你点我干嘛?? 👀 hentaiですが?");
+				var temptitle = "";
+		var title ="";
+		var i = 0;
+		var length = arr.length;
+		var segList = pySegSort(arr);
+		var letter = "";
+
+
+		for(i = 0; i < segList.length; i ++){
+
+			letter = segList[i].letter.toUpperCase();
+			title += "<div style=\"font-size: 17px; color: #333333; background-color: #f2f2f2; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;\">" + letter  +"</div>" ;
+
+			var idx = 0 ;
+
+			segList[i].data.forEach(function(arr){
+
+				if(idx === segList[i].data.length - 1){     temptitle
+				+= arr.split('-')[0];     console.log("idx === 最后一个"
+				);
+
+				}else{
+					temptitle += arr.split('-')[0] + " 、 " ;
+					idx ++;
+				}
+			});
+
+			title += "<p style=\"display:inline; line-height:2;\">" + temptitle + "</p><br>";
+			temptitle = "";
+
+		};
+
+
+		// var text = "<div style=\"display:block; width:100%;margin:auto;\"><div style=\"display:inline-block; float:left; width:10%;\"><img style=\"height: 80px; display: inline;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></div>\
+		// <div style=\"display:inline-block; float:left; width:80%;\"><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=2082e347d9daf8ea5568575ea9ffee772ddecbf35093a3ef860d41efccfc3233\" style=\"text-align:left;display:block;color:#333333;font-size:15px;\">欢迎加群→951162656</a>\
+		// <a href=\"https://leila77.github.io/github.io/\";style=\"text-align: center; display:block; width:30%;background-color:#333333;color:#f2f2f2;text-decoration:none;font-weight:bold;font-size:15px;\">网页版歌单</a>\
+		// <p style=\"text-align:left; font-size:15px; display:block;width:60%;\">♡感谢大家的礼物和陪伴♡</p></div></div>\
+		// <div style=\"display:block; position:absolute; top: 200px;width: 98%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;\">" + title +"</div>";
+
+var text = "<div style=\"width:95%; margin-right:0;\"><img style=\"height: 80px; display: block; margin:1px auto;\" src=\"http://i1.hdslb.com/bfs/face/797eab41223490ec6d1acba6b93ac47d5dce8ade.jpg\" />\
+		<div style=\"display:block; margin:auto; text-align: center;\"><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=2082e347d9daf8ea5568575ea9ffee772ddecbf35093a3ef860d41efccfc3233\" style=\"margin:auto;width:20%;margin:auto;text-align:center;display:inline-block;background-color:#333333;color:#f2f2f2;text-decoration:none;font-size:13px;\">直播通知群951162656</a>\
+		<a href=\"https://leila77.github.io/github.io/\";style=\"margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;background-color:#333333;color:#f2f2f2;text-decoration:none;font-size:13px;\">网页版歌单</a></div>\
+		<p style=\"margin:0 auto;text-align:center; font-size:13px; display:block;\">♡感谢大家的礼物和陪伴♡</p>\
+		<p style=\"margin:auto;text-align:center; font-size:10px; display:block;\">v v v 以下是不太常更新的歌单 v v v</p>\
+		<div style=\"display:block; position:absolute; top:140px; width:95%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;\">" + title +"</div></div>";
+
+
+
+		var dummy = document.createElement("input");
+		document.body.appendChild(dummy);
+		dummy.setAttribute('value', text);
+		dummy.select();
+		document.execCommand("copy");
+		document.body.removeChild(dummy);
+		alert("复制成功惹~");
 
 	}
 
