@@ -403,7 +403,7 @@
 ////////////////////////////// 魔法2号 /////////////////////////
 	function magic2(){
 
-				var temptitle = "";
+		var temptitle = "";
 		var title ="";
 		var i = 0;
 		var length = arr.length;
@@ -420,9 +420,9 @@
 
 			segList[i].data.forEach(function(arr){
 
-				if(idx === segList[i].data.length - 1){     temptitle
-				+= arr.split('-')[0];     console.log("idx === 最后一个"
-				);
+				if(idx === segList[i].data.length - 1){     
+					temptitle += arr.split('-')[0];     
+					console.log("idx === 最后一个");
 
 				}else{
 					temptitle += arr.split('-')[0] + " 、 " ;
