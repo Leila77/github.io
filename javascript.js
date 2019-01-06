@@ -345,8 +345,7 @@
 
 
 /////////////////////////////// 给老糖的魔法按钮 /////////////////////////////
-
-	function magic(){
+function magic(){
 		var temptitle = "";
 		var title ="";
 		var i = 0;
@@ -358,7 +357,7 @@
 		for(i = 0; i < segList.length; i ++){
 
 			letter = segList[i].letter.toUpperCase();
-			title += "<div style=\"font-size: 17px; color: #333333; background-color: #f2f2f2; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;\">" + letter  +"</div>" ;
+			title += "<div style=\"font-size: 17px; color: #373854; background-color:#d2d4dc; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;\">" + letter  +"</div>" ;
 
 			var idx = 0 ;
 
@@ -380,9 +379,9 @@
 		};
 
 
-		var text = "<div style=\"overflow: auto; height: 220px; width: 98%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;\"><p style=\"color: #333333; background-color: #f2f2f2; font-size: 15px; padding-left: 20px; display:block; width:180px;\"><strong>❤&nbsp;歌单持续更新中&hellip;&hellip;</strong></p>" + title +"</div>\
-		<p><img style=\"height: 80px; margin: auto; display: block;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></p>\
-		<p style=\"text-align: center;font-size:10px;\">感谢大家的陪伴 &gt; &lt;</p><p style=\"text-align:center;display:block;color:#333333;font-size:10px;margin-bottom:15px;\">群 951162656</p><a href=\"https://leila77.github.io/github.io/\";style=\"text-align: center; display:block; margin:auto; width:100px;background-color:#333333;color:#f2f2f2;text-decoration:none;font-weight:bold;font-size: 11px;padding:2px 2px; font-size:10px;\">网页版歌单戳我</a>";
+		var text = "<div style=\"opacity:0.9; overflow:auto; height:220px; width:98%; background-color:#373854; color:#d2d4dc; font-size:13px; margin:auto; padding:0px 20px; line-height: 1.5;\"><div><p style=\"display:inline-block; color:#f8f8fa; font-size:15px; width:50%;\"><strong>❤&nbsp;歌单持续更新中&hellip;&hellip;</strong></p><a href=\"https://leila77.github.io/github.io/\" style=\"margin-right:10px; border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align: center; display:inline-block; background-color:#493267; color:#7bb3ff; text-decoration:none; font-size:11px;\"> 网页版歌单</a></p><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=442f36be207473ecd3a95b0540d9e194cd579d4597af4df75fba77946bc1cbcc\" style=\"border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align:center; display:inline-block; background-color:#493267; color:#7bb3ff; font-size:10px;\">群951162656</a></div>" + title +"</div>\
+		<p><img style=\"height:80px; margin:auto; display:block;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></p>\
+		<p style=\"color:#373854; text-align:center; font-size:13px;\">感谢大家的陪伴和礼物( *¯ ³¯*)♡ㄘゅ</p>";
 
 
 
@@ -396,6 +395,59 @@
 		alert("复制成功惹~");
 
 	}
+
+//////////////////////////////   旧的一号魔法按钮   /////////////////////////////////
+
+	// function magic(){
+	// 	var temptitle = "";
+	// 	var title ="";
+	// 	var i = 0;
+	// 	var length = arr.length;
+	// 	var segList = pySegSort(arr);
+	// 	var letter = "";
+
+
+	// 	for(i = 0; i < segList.length; i ++){
+
+	// 		letter = segList[i].letter.toUpperCase();
+	// 		title += "<div style=\"font-size: 17px; color: #333333; background-color: #f2f2f2; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;\">" + letter  +"</div>" ;
+
+	// 		var idx = 0 ;
+
+	// 		segList[i].data.forEach(function(arr){
+
+	// 			if(idx === segList[i].data.length - 1){     
+	// 				temptitle += arr.split('-')[0];     
+	// 			console.log("idx === 最后一个");
+
+	// 			}else{
+	// 				temptitle += arr.split('-')[0] + " 、 " ;
+	// 				idx ++;
+	// 			}
+	// 		});
+
+	// 		title += "<p style=\"display:inline; line-height:2;\">" + temptitle + "</p><br>";
+	// 		temptitle = "";
+
+	// 	};
+
+
+	// 	var text = "<div style=\"overflow: auto; height: 220px; width: 98%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;\"><p style=\"color: #333333; background-color: #f2f2f2; font-size: 15px; padding-left: 20px; display:block; width:180px;\"><strong>❤&nbsp;歌单持续更新中&hellip;&hellip;</strong></p>" + title +"</div>\
+	// 	<p><img style=\"height: 80px; margin: auto; display: block;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></p>\
+	// 	<p style=\"text-align: center;font-size:10px;\">感谢大家的陪伴 &gt; &lt;</p><p style=\"text-align:center;display:block;color:#333333;font-size:10px;margin-bottom:15px;\">群 951162656</p><a href=\"https://leila77.github.io/github.io/\";style=\"text-align: center; display:block; margin:auto; width:100px;background-color:#333333;color:#f2f2f2;text-decoration:none;font-weight:bold;font-size: 11px;padding:2px 2px; font-size:10px;\">网页版歌单戳我</a>";
+
+
+
+
+	// 	var dummy = document.createElement("input");
+	// 	document.body.appendChild(dummy);
+	// 	dummy.setAttribute('value', text);
+	// 	dummy.select();
+	// 	document.execCommand("copy");
+	// 	document.body.removeChild(dummy);
+	// 	alert("复制成功惹~");
+
+	// }
 
 
 
