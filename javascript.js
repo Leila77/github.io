@@ -357,7 +357,7 @@ function magic(){
 		for(i = 0; i < segList.length; i ++){
 
 			letter = segList[i].letter.toUpperCase();
-			title += "<div style=\"font-size: 17px; color: #373854; background-color:#d2d4dc; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;\">" + letter  +"</div>" ;
+			title += "<div style=\"border-radius:15px; font-size: 17px; color: #373854; background-color:#d2d4dc; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;\">" + letter  +"</div>" ;
 
 			var idx = 0 ;
 
@@ -379,7 +379,7 @@ function magic(){
 		};
 
 
-		var text = "<div style=\"opacity:0.9; overflow:auto; height:220px; width:98%; background-color:#373854; color:#d2d4dc; font-size:13px; margin:auto; padding:0px 20px; line-height: 1.5;\"><div><p style=\"display:inline-block; color:#f8f8fa; font-size:15px; width:50%;\"><strong>❤&nbsp;歌单持续更新中&hellip;&hellip;</strong></p><a href=\"https://leila77.github.io/github.io/\" style=\"margin-right:10px; border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align: center; display:inline-block; background-color:#493267; color:#7bb3ff; text-decoration:none; font-size:11px;\"> 网页版歌单</a></p><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=442f36be207473ecd3a95b0540d9e194cd579d4597af4df75fba77946bc1cbcc\" style=\"border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align:center; display:inline-block; background-color:#493267; color:#7bb3ff; font-size:10px;\">群951162656</a></div>" + title +"</div>\
+		var text = "<div style=\"opacity:0.9; overflow:auto; height:220px; width:98%; background-color:#373854; color:#d2d4dc; font-size:13px; margin:auto; padding:0px 20px; line-height: 1.5;\"><div><p style=\"display:inline-block; color:#f8f8fa; font-size:15px; width:50%;\"><strong>▁ ▂ ▃ ▅ ▆ ▇ &nbsp;&nbsp;歌单持续更新中</strong></p><a href=\"https://leila77.github.io/github.io/\" style=\"margin-right:10px; border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align: center; display:inline-block; background-color:#493267; color:#7bb3ff; text-decoration:none; font-size:11px;\"> 网页版歌单</a></p><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=442f36be207473ecd3a95b0540d9e194cd579d4597af4df75fba77946bc1cbcc\" style=\"border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align:center; display:inline-block; background-color:#493267; color:#7bb3ff; font-size:10px;\">群951162656</a></div>" + title +"</div>\
 		<p><img style=\"height:80px; margin:auto; display:block;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></p>\
 		<p style=\"color:#373854; text-align:center; font-size:13px;\">感谢大家的陪伴和礼物( *¯ ³¯*)♡ㄘゅ</p>";
 
