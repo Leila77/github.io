@@ -581,7 +581,7 @@ var text = "<div style=\"width:95%; margin-right:0;\"><img style=\"height: 80px;
 		switch(dayNum) {
 			case 0:
 			day = "星期天";
-			liveTime = "下午3点左右直播~具体看群消息";
+			liveTime = "下午3点左右直播~具体看群";
 			break;
 
 			case 1:
