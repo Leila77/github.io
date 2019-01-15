@@ -48,7 +48,7 @@
    
 		var count = 0;
 		var total = arr.length;
-		var counter = setInterval(timer, 13);
+		var counter = setInterval(timer, 3);
 
 		function timer(){
 
@@ -59,13 +59,14 @@
 		        
 		        setTimeout(function(){
 		            count = total;
-		            document.getElementById("counter").innerHTML=count;
+		            document.getElementById("counter").innerHTML= "已收录 " + count + " 首歌曲";
 		   
 		        }, 800);
 
 		     return;
 		  }
-		 document.getElementById("counter").innerHTML=count;
+
+		 document.getElementById("counter").innerHTML = "已收录 " + count + " 首歌曲";
 		}
 	    
 	};

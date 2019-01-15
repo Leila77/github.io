@@ -6,7 +6,8 @@
 
 
 
-	var originalList = "爱夏-胡夏\
+	var originalList = "坠落-胡彦斌\
+	爱夏-胡夏\
 	燕窝-吴青峰\
 	时间回眸-李行亮\
 	一万次悲伤-逃跑计划\
