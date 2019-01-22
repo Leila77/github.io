@@ -4,7 +4,8 @@
  */
 
 
-	var divider = " — ";//网站上显示的分隔符
+	// var divider = " — ";//网站上显示的分隔符
+	var divider = "   ";//网站上显示的分隔符
 	var arr = originalList.split('	');//原始歌单文件分割为array
 
 	//////////////////////////////////回车搜索//////////////////////////////////////
@@ -69,7 +70,7 @@
 		 document.getElementById("counter").innerHTML = "已收录 " + count + " 首歌曲";
 		}
 	    
-	};
+	}
 
 
 	/////////////////// 动态背景图 //////////////////////////
@@ -94,7 +95,7 @@
 
 		var newSongs = "";
 		for(i = 0 ; i < 20; i ++){
-			newSongs +=  " ♡ " + arr[i].split('-')[0] + "&nbsp&nbsp&nbsp";
+			newSongs +=  " ♡ " + arr[i].split('-')[0] + "&nbsp&nbsp";
 			//+ "(" + arr[i].split('-')[1] + ")  "  
 		}
 
@@ -128,7 +129,7 @@
 				
 				return a.localeCompare(b,'zh-CN');
 			});
-		};
+		}
 
 
 
@@ -157,15 +158,16 @@
 
 				letter = segList[i].letter.toUpperCase();
 				
-				
-				arrToStr += "<p style=\"font-size:17px; color:pink; background-color: #f2f2f2; width:23px; font-weight:bold;border-radius:4px; text-align:center; \">" + letter + "</p>" ;
+				// 歌名排序首字母的颜色
+				arrToStr += "<p style=\"font-size:25px; color: #d1d1e0; width:60px; font-weight:1000; text-align:left;margin:7px 0; \">" + letter + "</p>" ;
 				
 
 
 				
 
 				segList[i].data.forEach(function(arr){
-					temp += arr.split('-')[0] + divider + arr.split('-')[1] + "<br>";
+					//歌名的字体字号 & 歌手的字体颜色
+					temp += "<p style=\"display:inline;font-weight:400; font-size:15px;\">" + arr.split('-')[0] + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:9px; color:#c2c2d6;\">" + arr.split('-')[1] + "</p>"+ "<br>";
 
 				});
 
@@ -210,7 +212,7 @@
 					if(str.toString().includes(nextSingerStr) == false){
 						titleStr = sortedBySinger[i].split('-')[0].toString();
 					}else{
-						titleStr = sortedBySinger[i].split('-')[0].toString() + "  丶  ";
+						titleStr = sortedBySinger[i].split('-')[0].toString() + "  、  ";
 					}
 
 					str[i] += titleStr;
@@ -219,16 +221,16 @@
 					
 				}else{ //如果歌手不在array里
 
-					if ( i == 0 ){
-						str.push("<p style=\"font-size:13px; color:pink; background-color: #f2f2f2; height:25px; width:100px;padding:6px; display:inline-block;font-weight:bold;border-radius:4px; \">" + singerStr + " </p>" ); //加入str 没有回车 
+					if ( i == 0 ){//歌手分类下歌手的颜色
+						str.push("<p style=\"font-size:16px; color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block;font-weight:600; margin-top:0; margin-bottom:0;\">" + singerStr + " </p>" ); //加入str 没有回车 
 					}else{
-						str.push("<br><p style=\"font-size:13px; color:pink; background-color: #f2f2f2; height:25px; width:100px;padding:6px; display:inline-block;font-weight:bold;border-radius:4px; \">" + singerStr + " </p>" ); //加入str 回车~
-					}
+						str.push("<br><p style=\"font-size:16px; color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block; font-weight:600; margin-top:30px; margin-bottom:0; \">" + singerStr + " </p>" ); //加入str 回车~
+					} 
 
 					if(str.toString().includes(nextSingerStr) == false){
 						titleStr = sortedBySinger[i].split('-')[0].toString();
 					}else{
-						titleStr = sortedBySinger[i].split('-')[0].toString() + "  丶  " ;
+						titleStr = sortedBySinger[i].split('-')[0].toString() + "  、  " ;
 					}
 
 					str[i] +=  "<br>" + titleStr + "  ";
@@ -571,62 +573,62 @@ var text = "<div style=\"width:95%; margin-right:0;\"><img style=\"height: 80px;
 
 /////////////////////// 直播时间 ////////////////////////////////////
 
-	function getSchedule(){
-		var date = new Date();
-		var dayNum = date.getDay();
-		var day = "";
-		var liveTime = "";
-		var result = "";
-		console.log(day);
+	// function getSchedule(){
+	// 	var date = new Date();
+	// 	var dayNum = date.getDay();
+	// 	var day = "";
+	// 	var liveTime = "";
+	// 	var result = "";
+	// 	console.log(day);
 
-		switch(dayNum) {
-			case 0:
-			day = "星期天";
-			liveTime = "下午3点左右直播~具体看群";
-			break;
+	// 	switch(dayNum) {
+	// 		case 0:
+	// 		day = "星期天";
+	// 		liveTime = "下午3点左右直播~具体看群";
+	// 		break;
 
-			case 1:
-			day = "星期一";
-			liveTime = "今天休息噢~~明天见下午4点见~！";
-			break;
+	// 		case 1:
+	// 		day = "星期一";
+	// 		liveTime = "今天休息噢~~明天见下午4点见~！";
+	// 		break;
 
-			case 2:
-			day = "星期二";
-			liveTime = "下午4点直播~";
-			break;
+	// 		case 2:
+	// 		day = "星期二";
+	// 		liveTime = "下午4点直播~";
+	// 		break;
 
-			case 3:
-			day = "星期三";
-			liveTime = "下午4点直播~";
-			break;
+	// 		case 3:
+	// 		day = "星期三";
+	// 		liveTime = "下午4点直播~";
+	// 		break;
 
-			case 4:
-			day = "星期四";
-			liveTime = "下午4点直播";
-			break;
+	// 		case 4:
+	// 		day = "星期四";
+	// 		liveTime = "下午4点直播";
+	// 		break;
 
-			case 5:
-			day = "星期五";
-			liveTime = "下午4点直播~";
-			break;
+	// 		case 5:
+	// 		day = "星期五";
+	// 		liveTime = "下午4点直播~";
+	// 		break;
 
-			case 6:
-			day = "星期六";
-			liveTime = "下午4点直播~";
-			break;
+	// 		case 6:
+	// 		day = "星期六";
+	// 		liveTime = "下午4点直播~";
+	// 		break;
 
-		}
+	// 	}
 
-		result = "今天" + day + "(｡･ω･｡)" + liveTime;
-		return result;
+	// 	result = "今天" + day + "(｡･ω･｡)" + liveTime;
+	// 	return result;
 
-	}
+	// }
 
 
-	function setSchedule(){
-		var sche = getSchedule();
-		document.getElementById("liveSchedule").innerHTML = sche;
-	}
+	// function setSchedule(){
+	// 	var sche = getSchedule();
+	// 	document.getElementById("liveSchedule").innerHTML = sche;
+	// }
 
 
 
@@ -666,7 +668,7 @@ var text = "<div style=\"width:95%; margin-right:0;\"><img style=\"height: 80px;
 		modalOnLoad();
 		sortByTitle();
 		setContent();
-		setSchedule();
+		// setSchedule();
 		count();
 	}
 

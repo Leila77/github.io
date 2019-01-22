@@ -3,29 +3,29 @@ $blue: #76b1c2
 $purple:#9d7bda;
 */
 *{
-	font-family: Helvetica, Georgia,"Microsoft Yahei","微软雅黑",  STXihei, "华文细黑", sans-serif;
+	/*font-family: Helvetica, Georgia,"Microsoft Yahei","微软雅黑",  STXihei, "华文细黑", sans-serif;*/
+	font-family: Helvetica, Georgia, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, SimSun, “宋体”, Heiti, “黑体”, sans-serif;
 	box-sizing: border-box;
 
 }
 
 body{
-	background-color: pink;
-	letter-spacing: 1px;
+	background-color: #efeff5;
+	letter-spacing: 2px;
 	margin: 0;
 
 }
 
 #counter{
-	background-color:pink;
-	color: #f2f2f2;
+
+	color: lightblue;
 	margin:10px auto;
 	width:500px;
 	
 	line-height: 20px;
 	font-size: 13px;
-	border-radius: 100px;
-	border-style: solid;
-	border-width:2px;
+	/*border-radius: 100px;*/
+	border:1px solid lightblue;
 	text-align: center;
 	padding:1px;
 
@@ -44,7 +44,7 @@ body{
 
 
  .header #headerContainer{
- 	max-width: 650px;
+ 	/*max-width: 650px;*/
  	margin:auto;
 
  }
@@ -53,7 +53,7 @@ body{
 
 .header a {
   float: left;
-   background-color: #f2f2f2;
+  background-color: #f2f2f2;
   color: #333333;
   text-align: center;
   padding: 12px;
@@ -65,8 +65,8 @@ body{
 }
 
 .header a.logo {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 700;
   background:inherit;
 }
 
@@ -91,7 +91,7 @@ body{
 
 
 
-.header #liveSchedule{
+/*.header #liveSchedule{
 	border-style: solid;
 	border-color:#333333;
 	border-width:1px;
@@ -100,7 +100,7 @@ body{
 	color:#333333;
 	margin-bottom: 0;
 
-}
+}*/
 
 
 
@@ -129,12 +129,14 @@ body{
     .tab{
   		width:46%;
   		height:40px;
+  		
 
     }
 
     #buttons{
   		width:94%;
   		margin:5px auto;
+
     }
 
     
@@ -151,7 +153,8 @@ body{
     }
 
     #newContainer{
-    	min-width:80%;
+    	max-width:370px;
+    	margin:auto;
     }
 
 
@@ -204,7 +207,7 @@ body{
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 4px solid pink;
+    border: 2px solid lightblue;
     /*width: 40%;  Could be more or less, depending on screen size */
     max-width:500px;
     height:420px;
@@ -224,7 +227,7 @@ body{
 
 /* The Close Button */
 .close {
-    color: pink;
+    color: lightblue;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -232,7 +235,7 @@ body{
 
 .close:hover,
 .close:focus {
-    color: lightgreen;
+    color: pink;
     text-decoration: none;
     cursor: pointer;
 }
@@ -256,7 +259,7 @@ footer{
 
 #footer{
 	display: inline;
-	color:#f2f2f2;
+	color:#9494b8;;
 }
 
 footer button{
@@ -331,22 +334,20 @@ a:hover {
 }
 
 #newContainer{
-	background-color: inherit;
 	opacity: 0.9;
 	width: 480px;
 	margin: 10px auto;
-	border-style: solid;
+	border: 1px solid lightblue;
 	
 	padding: 5px 5px;
 	text-align: center;
-	border-color: #f2f2f2;
-	border-width:2px;
+	
 	border-radius: 4px;
 }
 
 #new{
-	font-size:14px;
-	color:white;
+	font-size:11px;
+	color:grey; /*新歌字体颜色*/
 	line-height: 1.5;
 }
 
@@ -367,7 +368,7 @@ a:hover {
 }
 
 #songList{
-	background-color: white;
+	/*background-color: white;*/
 	background-image:url("one_piece_jt.png");
 	background-repeat: no-repeat;
 	background-position:bottom right;
@@ -382,16 +383,17 @@ a:hover {
 	position: relative;
 	
 	margin:auto;
-	color:pink;
+	color: grey; /*歌单字体颜色*/
 
 	height: 60vh;
 	width:100%;	
+
 
 }
 
 #buttons{
 	width:100%;
-
+	padding:0 20px;
 }
 
 
@@ -404,7 +406,6 @@ button{
 	width:23%;
 	height:30px;
 	margin-bottom:13px;
-	margin-right:4px;
 	font-weight: bold;
 	border-radius: 4px;
 }
@@ -420,7 +421,7 @@ button:hover{
 
 #search{
 	height:30px;
-	width:30%;
+	width:33%;
 	margin-right:4px;
 	background-color:white;
 	border-radius: 4px;
@@ -488,13 +489,14 @@ button:hover{
 .alignMiddle{
 	display: inline;
 	width:100%;
+
 }
 
 
 
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 5px;
 }
 
 /* Track */
