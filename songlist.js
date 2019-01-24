@@ -6,7 +6,9 @@
 
 
 
-	var originalList = "想定下来-关喆\
+	var originalList = "逃生-张信哲\
+	Beautiful Mess-Kristian Kostov\
+	想定下来-关喆\
 	远的要命的爱情-信\
 	奇妙能力歌-陈粒\
 	勿忘心安-张杰\
