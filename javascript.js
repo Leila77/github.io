@@ -144,12 +144,11 @@
 			
 			var segList = pySegSort(arr).slice();
 			
-			
-
-			
+			//-----------------------------结构说明-
 			//整个list ：segList
 			//a里的内容 ： segList[0].data
 			//a里的第一首歌： segList[0].data[0]
+			//-------------------------------------
 
 
 			for(i = 0; i < segList.length; i ++){
@@ -166,8 +165,41 @@
 				
 
 				segList[i].data.forEach(function(arr){
-					//歌名的字体字号 & 歌手的字体颜色
-					temp += "<p style=\"display:inline;font-weight:400; font-size:15px;\">" + arr.split('-')[0] + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:9px; color:#c2c2d6;\">" + arr.split('-')[1] + "</p>"+ "<br>";
+
+
+					var _title = arr.split('-')[0];
+					var _singer = arr.split('-')[1];
+					var _tag1 = arr.split('-')[2];
+					var _tag2 = arr.split('-')[3];
+					var _tag3 = arr.split('-')[4];
+					var _tag4 = arr.split('-')[5];
+					var _tag5 = arr.split('-')[6];
+
+
+					//歌名的字体字号 & 歌手的字体颜色 在这里设置
+					temp += "<p style=\"display:inline;font-weight:400; font-size:15px;\">" + _title + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:9px; color:#c2c2d6;\">" + _singer ;
+					
+					
+					//----------------添加标签----------------------
+
+					if(_tag1 != ""){//如果第一个分类标签不为空
+						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag1 + "</p>" ;
+					}
+					if(_tag2 != "" && _tag2 != "10"){//如果第二个分类标签不为空
+						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag2 + "年代" + "</p>";
+					}
+					if(_tag3 != ""){//如果第二个分类标签不为空
+						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag3 + "</p>";
+					}
+					if(_tag4 != ""){//如果第二个分类标签不为空
+						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag4 + "</p>";
+					}
+					if(_tag5 != ""){//如果第二个分类标签不为空
+						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag5 + "</p>";
+					}
+						
+					temp += "</p>"+ "<br>";
+					//----------------------------------------------
 
 				});
 

@@ -10,21 +10,20 @@ $purple:#9d7bda;
 }
 
 body{
-	background-color: #efeff5;
+	background-color: #dce7ef;/*背景颜色*/
 	letter-spacing: 2px;
 	margin: 0;
 
 }
 
 #counter{
-
+	background-color: #efeff5;/*歌单歌曲总数背景颜色*/
 	color: lightblue;
 	margin:10px auto;
 	width:500px;
 	
 	line-height: 20px;
 	font-size: 13px;
-	/*border-radius: 100px;*/
 	border:1px solid lightblue;
 	text-align: center;
 	padding:1px;
@@ -35,7 +34,7 @@ body{
 /*  -------------responsive header-------------*/
 .header {
   overflow: hidden;
-  background-color: white;  
+  background-color: white;  /*header背景颜色*/
   padding: 10px 20px;
   color: #333333;
   margin:auto;
@@ -44,7 +43,6 @@ body{
 
 
  .header #headerContainer{
- 	/*max-width: 650px;*/
  	margin:auto;
 
  }
@@ -334,6 +332,7 @@ a:hover {
 }
 
 #newContainer{
+	background-color: #efeff5;
 	opacity: 0.9;
 	width: 480px;
 	margin: 10px auto;
@@ -359,6 +358,7 @@ a:hover {
 }
 
 #songListContainer{
+
 	height: 70vh;
 	max-width:500px;
 	min-width:300px;
@@ -369,6 +369,7 @@ a:hover {
 
 #songList{
 	/*background-color: white;*/
+	background-color: #efeff5;
 	background-image:url("one_piece_jt.png");
 	background-repeat: no-repeat;
 	background-position:bottom right;
