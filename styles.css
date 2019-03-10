@@ -35,6 +35,7 @@ body{
     position: relative;
 }
 .tabrow li {
+	cursor: pointer;
 	font-weight: 600;
 	font-size: 10px;
 	float:left;
@@ -54,6 +55,7 @@ body{
 .tabrow li:hover{
 	background-color: white;
 	color:#333333;
+	transition: .5s;
 }
 
 .tabrow li #search{
@@ -150,14 +152,15 @@ body{
 
 .header a.logo:hover{
 	background-color: inherit;
-
 	color:#333333;
+	transition: .5s;
 }
 
 .header a:hover {
   background-color: lightblue;
   border:1px solid white;
   color: white;
+  transition: .5s;
 }
 
 .header a.active {
@@ -322,6 +325,7 @@ body{
     color: pink;
     text-decoration: none;
     cursor: pointer;
+    transition: .5s;
 }
 
 
@@ -354,11 +358,13 @@ footer button{
 	font-weight: normal;
 	padding:0 1px;
 	margin-bottom:0;
+	cursor: pointer;
 }
 
 footer button:hover{
 	color:white;
 	background-color:lightblue;
+	transition: .5s;
 }
 
 
@@ -647,4 +653,5 @@ button.tags{
 	font-weight:normal;
 	text-align: center;
 	font-size: 12px;
+	cursor: pointer;
 }
