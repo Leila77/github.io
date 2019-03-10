@@ -202,7 +202,8 @@ body{
 
 	.header{
 		padding: 10px 10px;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
+
 	}
     .header a {
     	float: none;
@@ -218,6 +219,7 @@ body{
     }
 
     .header-right {
+    	display:none; /*手机端隐藏header按钮*/
     	float: none;
     }
 
@@ -230,8 +232,8 @@ body{
  	input#search{
   		width:40%;
   		height:26px;
-  		float:left;
-  		margin:auto;
+  		float:right;
+  		margin:0 7px;
     }
 
  	#buttons #submit{
@@ -239,6 +241,10 @@ body{
   		height:0;
   		display:inline;
 
+    }
+
+    .tabrow li{
+    	font-size:13px;
     }
 
     #newContainer{
