@@ -183,19 +183,19 @@
 					//----------------添加标签----------------------
 
 					if(_tag1 != ""){//如果第一个分类标签不为空
-						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag1 + "</p>" ;
+						temp += "<button class = \"tags\" style=\"margin-left:3px;\">" + _tag1 + "</button>";
 					}
 					if(_tag2 != "" && _tag2 != "10"){//如果第二个分类标签不为空
-						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag2 + "年代" + "</p>";
+						temp += "<button class = \"tags\">" + _tag2 + "年代" + "</button>";
 					}
 					if(_tag3 != ""){//如果第二个分类标签不为空
-						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag3 + "</p>";
+						temp += "<button class = \"tags\">" + _tag3 + "</button>";
 					}
 					if(_tag4 != ""){//如果第二个分类标签不为空
-						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag4 + "</p>";
+						temp += "<button class = \"tags\">" + _tag4 + "</button>";
 					}
 					if(_tag5 != ""){//如果第二个分类标签不为空
-						temp += "<p style=\"display:inline; background-color:black; color:white; margin-right:2px;\">" + _tag5 + "</p>";
+						temp += "<button class = \"tags\">" + _tag5 + "</button>";
 					}
 						
 					temp += "</p>"+ "<br>";
