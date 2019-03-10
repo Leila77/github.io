@@ -191,14 +191,11 @@ body{
 @media screen and (max-width: 675px) {
 
 
-	#songList{
-		min-height: 65vh;
-		max-height:70vh;
-	}
-
 	
 	#counter{
 		width:90%;
+		position:absolute;
+		bottom:30px;
 	}
 
 	.tabrow:after {
@@ -459,7 +456,7 @@ a:hover {
 
 #mainContainer{
 	width: 95%;
-	height: 70vh;
+	height:75%;
 	margin:auto;
 
 }
