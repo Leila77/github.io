@@ -39,7 +39,7 @@ body{
 	font-weight: 600;
 	font-size: 10px;
 	float:left;
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 0 10px;
     border:1px solid white;
     color:white;
@@ -190,8 +190,19 @@ body{
 
 @media screen and (max-width: 675px) {
 
+	
+	#counter{
+		width:90%;
+	}
+
+	.tabrow:after {
+    display:none;
+}
+
+
 	.header{
 		padding: 10px 10px;
+		margin-bottom: 5px;
 	}
     .header a {
     	float: none;
@@ -210,36 +221,28 @@ body{
     	float: none;
     }
 
-    .tab{
-  		width:46%;
-  		height:40px;
-  		
-
-    }
 
     #buttons{
   		width:94%;
   		margin:5px auto;
-
     }
 
-
-    
-
- 	#search{
-  		width:70%;
-  		height:40px;
+ 	input#search{
+  		width:40%;
+  		height:26px;
   		float:left;
   		margin:auto;
     }
 
  	#buttons #submit{
-  		width:22%;
-  		height:40px;
+  		width:0;
+  		height:0;
+  		display:inline;
 
     }
 
     #newContainer{
+    	display:none;
     	max-width:370px;
     	margin:auto;
     }

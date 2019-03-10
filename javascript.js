@@ -80,10 +80,10 @@
 		
 		if (startTime % 2 == 0){
 			var elem = document.getElementById("songList");
-			elem.setAttribute("style","background-image:url(\"one_piece_jt2.png\");");
+			elem.setAttribute("style","background-image:url(\"one_piece_jt2.png\");transition: .1s;");
 		}else{
 			var elem = document.getElementById("songList");
-			elem.setAttribute("style","background-image:url(\"one_piece_jt3.png\");");
+			elem.setAttribute("style","background-image:url(\"one_piece_jt3.png\");transition: .1s;");
 
 		}
 
