@@ -192,7 +192,8 @@ body{
 
 
 	#songList{
-		min-height: 80%;
+		min-height: 60%;
+		max-height:70%;
 	}
 
 	
