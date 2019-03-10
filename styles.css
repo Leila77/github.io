@@ -95,7 +95,7 @@ body{
 
 #counter{
 	background-color: lightblue;/*歌单歌曲总数背景颜色*/
-	color: #f2f2f2;
+	color: white;
 	margin:10px auto;
 	width:500px;
 	
@@ -333,9 +333,7 @@ footer{
 	position:absolute;
 	left:5%;
 	bottom:0;
-
 	font-size: 8px;
-	color: #f2f2f2;
 	margin:auto;
 	height:30px;
 	width:90%;		
@@ -348,7 +346,7 @@ footer{
 
 footer button{
 	background-color: lightblue;
-	color:#f2f2f2; 
+	color:white; 
 	width:110px;
 	height:20px;
 	font-size: 8px;
