@@ -190,6 +190,11 @@ body{
 
 @media screen and (max-width: 675px) {
 
+
+	#songList{
+		min-height: 100%;
+	}
+
 	
 	#counter{
 		width:90%;
@@ -243,6 +248,7 @@ body{
 
     }
 
+
     .tabrow li{
     	font-size:13px;
     }
@@ -259,7 +265,7 @@ body{
     }
 
     footer #footer{
-  		display:none;
+  		
     }
 
     footer #copy{
