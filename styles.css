@@ -11,6 +11,12 @@ $purple:#9d7bda;
 
 body{
 	background-color: #dce7ef;/*背景颜色*/
+	
+/*	background-image:url("bg2.png"),url("guitar.jpg");
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;*/
+
 	letter-spacing: 2px;
 	margin: 0;
 
