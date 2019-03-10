@@ -108,6 +108,36 @@
 
 
 
+
+/////////////////////////////////change class//////////////////////////////////////////
+
+		function changeTabClass(id){
+			console.log(id);
+
+			switch(id) {
+  				case 'titleClass':
+
+  				document.getElementById(id).classList.add('selected');
+ 				document.getElementById('singerClass').classList.remove('selected');
+ 				console.log(document.getElementById(id).classList);
+    			break;
+
+ 				case 'singerClass':
+ 				document.getElementById(id).classList.add('selected');
+ 				document.getElementById('titleClass').classList.remove('selected');
+ 				console.log(document.getElementById(id).classList);
+   				break;
+
+			}
+			
+
+		}
+
+
+
+
+
+
 ////////////////////////////////////// 按歌手排序 //////////////////////////////////////////
 		
 		function sortBySinger(){
@@ -177,7 +207,7 @@
 
 
 					//歌名的字体字号 & 歌手的字体颜色 在这里设置
-					temp += "<p style=\"display:inline;font-weight:400; font-size:15px;\">" + _title + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:9px; color:#c2c2d6;\">" + _singer ;
+					temp += "<p style=\"display:inline;font-weight:400; font-size:12px;\">" + _title + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:12px; color:#c2c2d6;\">" + _singer ;
 					
 					
 					//----------------添加标签----------------------
@@ -697,7 +727,7 @@ var text = "<div style=\"width:95%; margin-right:0;\"><img style=\"height: 80px;
 
 ////////////////////////////////////// onLoad ///////////////////////////////////////////
 	function run(){
-		modalOnLoad();
+		//modalOnLoad();
 		sortByTitle();
 		setContent();
 		// setSchedule();

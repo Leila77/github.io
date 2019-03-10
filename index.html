@@ -27,7 +27,7 @@
 
 <div class="header">
 	<div id = "headerContainer">
-  		<a class="logo">亦嶙丷的不完全歌单</a>
+  		<a class="logo" href='https://live.bilibili.com/5607874' target='blank'>亦嶙丷 {●live}</a>
   		<!-- <a class="logo" id="liveSchedule" href='https://live.bilibili.com/5607874' target='blank'></a> -->
 
   		<div class="header-right">
@@ -62,16 +62,18 @@
 <!---------------------------- buttons ---------------------------->
 
 		
-		<div id = "buttons">
-			<div class="alignMiddle">
-				<button class="tab" id="titleBtn" onclick="sortByTitle();setContent();"> 歌名 </button>
-				<button class="tab" id="singerBtn"onclick="setContentSinger(simplifySinger());"> 歌手 </button>
-			</div>
-			<div class="alignMiddle">
-				<input id="search" placeholder="歌名 or 歌手名"></input>
-				<button onclick="search();" id = "submit">搜索</button>
-			</div>
-		</div>
+		
+			
+		<ul class="tabrow">
+   			<li class="selected" id="titleClass" onclick="sortByTitle();setContent();changeTabClass('titleClass');">歌名</li>
+   			<li class="" id="singerClass" onclick="setContentSinger(simplifySinger());changeTabClass('singerClass');">歌手</li>
+   			<li>标签</li>
+   			<input id="search" placeholder="搜索歌名 or 歌手" onfocus="this.placeholder = ''" onblur="this.placeholder = '搜索歌名 or 歌手'"></input>
+   			<button onclick="search();" id = "submit">搜索</button>
+		</ul>
+			
+			
+		
 
 
 
@@ -111,7 +113,7 @@
 
 <footer>
 	<p id="footer">©2018 考拉 🌝亦嶙丷冲鸭！</p>
-	<button id="copy" onclick="magic();">给小饼干的魔法摁扭</button>
+	<button id="copy" onclick="magic();">小饼干魔法摁扭</button>
 	<button id="copy" onclick="magic2();">魔法摁扭2号</button>
 </footer>
 
