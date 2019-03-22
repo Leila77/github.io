@@ -9,6 +9,10 @@ $purple:#9d7bda;
 
 }
 
+div#preload {
+	display:none;
+}
+
 body{
 	background-color: #dce7ef;/*背景颜色*/
 	background-image:url("bg3.jpg");
@@ -526,6 +530,7 @@ button:hover{
 
 #search{
 	height:21px;
+	
 	width:33%;
 	margin: 0px 0px 5px 90px; 
 

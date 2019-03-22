@@ -274,7 +274,7 @@
 					if(str.toString().includes(nextSingerStr) == false){
 						titleStr = sortedBySinger[i].split('-')[0].toString();
 					}else{
-						titleStr = sortedBySinger[i].split('-')[0].toString() + "  、  ";
+						titleStr = sortedBySinger[i].split('-')[0].toString() + "  /  ";
 					}
 
 					str[i] += titleStr;
@@ -284,18 +284,18 @@
 				}else{ //如果歌手不在array里
 
 					if ( i == 0 ){//歌手分类下歌手的颜色
-						str.push("<p style=\"font-size:16px; color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block;font-weight:600; margin-top:0; margin-bottom:0;\">" + singerStr + " </p>" ); //加入str 没有回车 
+						str.push("<p style=\"font-size:16px; font-weight:bold;color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block; margin-top:7; margin-bottom:0;\">" + singerStr + " </p>" ); //加入str 没有回车 
 					}else{
-						str.push("<br><p style=\"font-size:16px; color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block; font-weight:600; margin-top:30px; margin-bottom:0; \">" + singerStr + " </p>" ); //加入str 回车~
+						str.push("<br><p style=\"font-size:16px; font-weight:bold; color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block; margin-top:18px; margin-bottom:0; \">" + singerStr + " </p>" ); //加入str 回车~
 					} 
 
 					if(str.toString().includes(nextSingerStr) == false){
 						titleStr = sortedBySinger[i].split('-')[0].toString();
 					}else{
-						titleStr = sortedBySinger[i].split('-')[0].toString() + "  、  " ;
+						titleStr = sortedBySinger[i].split('-')[0].toString() + "  /  " ;
 					}
 
-					str[i] +=  "<br>" + titleStr + "  ";
+					str[i] +=  "<p style=\"line-height:2;margin:0;padding:0;\">" + titleStr + "  ";
 
 				}
 			}
