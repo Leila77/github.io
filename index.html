@@ -28,7 +28,21 @@
 
 <!---------------------- preload images ------------------------------>
 
-
+<style>
+/* body:before will also work
+ as will body:after */
+:root:before {
+  content: url(/bg3.jpg)
+           url(/one_piece_jt.jpg)
+           url(/one_piece_jt2.jpg)
+           url(/one_piece_jt3.jpg);
+  /* partial fallback */
+  background-image: url(/bg3.jpg);
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
+}
+</style>
 
 	
 
