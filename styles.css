@@ -145,6 +145,7 @@ body{
 	height:210px;
 
 	font-size: 30px;
+	font-family:STXihei;
 
 	margin-top: 15px auto;
 	
@@ -196,6 +197,7 @@ body{
 .block a#zhibojian {
 	
   font-size:40px;
+  font-family: Heiti;
   color:#85929E;
   font-weight: bold;
   background-color:#D6EAF8 ;
@@ -219,10 +221,11 @@ body{
 	color:white;
 	background-color:#F7DC6F;
 	width:100%;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   text-align: right;
   min-width:300px;
+  font-family: Heiti;
 
  
  
@@ -457,6 +460,7 @@ button:hover{
 	height:100%;
 	
 	font-size:16px;
+	font-family: Heiti;
 }
 
 
@@ -470,7 +474,8 @@ button:hover{
 	background-color:white;
 	border-radius: 4px;
 	border: 3px solid #85C1E9;
-		padding:10px;
+	padding:10px;
+	font-size: 15px;
 }
 
 #submit{

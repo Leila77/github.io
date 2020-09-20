@@ -67,7 +67,7 @@
 
 		     return;
 		    }
-			text = "<p style=\"color:white;\">已收录</p>" + "</br>" + "<div style=\"font-size:40px;display:block;width:100%;\">" + count + "</div>" + "</br>"+"<p style=\"color:white;\">首歌曲</p>";
+			text = "<p style=\"color:white;\">已收录</p>" + "</br>" + "<div style=\"font-size:40px;display:block;width:100%;font-family:Heiti;\">" + count + "</div>" + "</br>"+"<p style=\"color:white;\">首歌曲</p>";
 		    document.getElementById("counter").innerHTML = text;
 		}
 	    
