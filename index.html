@@ -17,6 +17,7 @@
 	<img src="/one_piece_jt.jpg" />
 	<img src="/one_piece_jt2.jpg" />
 	<img src="/one_piece_jt3.jpg" />
+	<img src="/1.jpg" />
 </div>
 
 </head>
@@ -35,7 +36,8 @@
   content: url(/bg3.jpg)
            url(/one_piece_jt.jpg)
            url(/one_piece_jt2.jpg)
-           url(/one_piece_jt3.jpg);
+           url(/one_piece_jt3.jpg)
+           url(/1.jpg);
   /* partial fallback */
   background-image: url(/bg3.jpg);
   visibility: hidden;
@@ -44,22 +46,72 @@
 }
 </style>
 
-	
 
-<!---------------------- header ------------------------------------->
-
-
-<div class="header">
-	<div id = "headerContainer">
-  		<a class="logo" href='https://live.bilibili.com/5607874' target='blank'>亦嶙丷 {●live}</a>
-  		<!-- <a class="logo" id="liveSchedule" href='https://live.bilibili.com/5607874' target='blank'></a> -->
-
-  		<div class="header-right">
-    		<a class="active" href="index.html">歌单</a>
-    		<a href="live.html">直播</a>
-  		</div>
+<div class="row">
+	<!------------------------- LOGO --------------------->
+	<div class="block">
+	  		<a class="logo">亦嶙丷</br>不完全歌单</a>
+	  		<!-- <a class="logo" id="liveSchedule" href='https://live.bilibili.com/5607874' target='blank'></a> -->
 	</div>
+	<!---------------------------- 新添加的歌们 ---------------------------->
+
+	<div id = "newContainer">
+		<H3>+ + + 新增 + + +</H3>
+		<div id = "new"></div>
+	</div>
+
+	<p id="footer">©2018 by 考拉 🌝 嶙妹冲鸭！！</p>
+
 </div>
+
+<div class="row">
+	<!---------------------------- 搜索框 ---------------------------->
+	<input id="search" placeholder="亦嶙会不会唱————————？" onfocus="this.placeholder = ''" onblur="this.placeholder = '搜索歌名 or 歌手 不要同时输入> <'"></input>
+  	<button onclick="search();" id = "submit">搜索</button>
+
+    <!---------------------------- counter ---------------------------->
+  	<div id = "counter"></div>
+
+
+
+  	<!------------------------- 直播间 --------------------->
+	<div class="block">
+    	<a id="zhibojian" href="https://live.bilibili.com/5607874" target='blank'>直播间</a>
+	</div>
+
+	<div class="block">
+		<button id="copy" onclick="magic2();">魔法摁扭2号</button>
+		<img src="1.jpg" alt="笔芯啾咪" style="width:50%;min-width: 250px;float:left">
+	</div>
+
+	<div>
+		<img>
+	</div>
+	<!-- <button id="copy" onclick="magic();">小饼干魔法摁扭</button> -->
+	
+</div>
+
+
+
+<div class="widerow">
+
+
+	<!-------------- buttons --------------->
+		
+		<ul class="tabrow">
+   			<li class="selected" id="titleClass" onclick="sortByTitle();setContent();changeTabClass('titleClass');">歌名</li>
+   			<li class="" id="singerClass" onclick="setContentSinger(simplifySinger());changeTabClass('singerClass');">歌手</li>
+   			<!-- <li>标签</li> -->
+   			
+		</ul>
+
+		<div id = "songList" onscroll="sajiao()"></div>
+	
+</div>
+
+
+
+
 
 
 <!------------------------- The Modal --------------------->
@@ -74,45 +126,34 @@
 </div>
 
 
-<!---------------------------- 新添加的歌们 ---------------------------->
 
-<div id = "newContainer">
-	<H3>+ + + 新增 + + +</H3>
-	<div id = "new"></div>
-</div>
 
-<div id = "mainContainer">
-	<div id= "songListContainer">
-<!---------------------------- buttons ---------------------------->
 
-		
-		
-			
-		<ul class="tabrow">
-   			<li class="selected" id="titleClass" onclick="sortByTitle();setContent();changeTabClass('titleClass');">歌名</li>
-   			<li class="" id="singerClass" onclick="setContentSinger(simplifySinger());changeTabClass('singerClass');">歌手</li>
-   			<li>标签</li>
-   			<input id="search" placeholder="搜索歌名 or 歌手" onfocus="this.placeholder = ''" onblur="this.placeholder = '搜索歌名 or 歌手'"></input>
-   			<button onclick="search();" id = "submit">搜索</button>
-		</ul>
+
+
+
+
+
+
+
 			
 			
 		
 
 
 
-<!---------------------------- 主体 ---------------------------->	
+<!---------------- 主体 --------------->
 
-
-		<div id = "songList" onscroll="sajiao()"></div>
 
 		
-		<div id = "counter"></div>
+
+		
+		
 
 
-	</div>
+	
 
- <!---------------------------- 待添加列表 ---------------------------->	
+ <!--------------- 待添加列表 ---------------->	
 	<!--<div id = "pendingContainer">
 		<H3>发现遗漏的歌？</H3>
 		<p>这里添加的歌会暂时添加到下面的待添加歌单里，会尽快添加到右边的歌单里哒</p>
@@ -136,9 +177,8 @@
 <!---------------------------- footer ---------------------------->	
 
 <footer>
-	<p id="footer">©2018 考拉 🌝亦嶙丷冲鸭！</p>
-	<button id="copy" onclick="magic();">小饼干魔法摁扭</button>
-	<button id="copy" onclick="magic2();">魔法摁扭2号</button>
+	
+	
 </footer>
 
 

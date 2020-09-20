@@ -5,8 +5,9 @@
 
 
 	// var divider = " — ";//网站上显示的分隔符
-	var divider = "   ";//网站上显示的分隔符
+	var divider = "";//网站上显示的分隔符
 	var arr = originalList.split('	');//原始歌单文件分割为array
+	console.log(arr);
 
 	//////////////////////////////////回车搜索//////////////////////////////////////
 	var input = document.getElementById("search");
@@ -49,7 +50,7 @@
    
 		var count = 0;
 		var total = arr.length;
-		var counter = setInterval(timer, 3);
+		var counter = setInterval(timer, 2);
 
 		function timer(){
 
@@ -60,14 +61,14 @@
 		        
 		        setTimeout(function(){
 		            count = total;
-		            document.getElementById("counter").innerHTML= "已收录 " + count + " 首歌曲";
+		            document.getElementById("counter").innerHTML= "<p>已收录</p>" + "</br>" + "<div style=\"font-size:40px; display:block;width:100%;\">" + count + "</div>" + "</br>"+"<p>首歌曲</p>";
 		   
 		        }, 800);
 
 		     return;
 		  }
 
-		 document.getElementById("counter").innerHTML = "已收录 " + count + " 首歌曲";
+		 document.getElementById("counter").innerHTML = "<p>已收录</p>" + "</br>" + "<div style=\"font-size:40px;display:block;width:100%;\">" + count + "</div>" + "</br>"+"<p>首歌曲</p>";
 		}
 	    
 	}
@@ -95,7 +96,7 @@
 
 		var newSongs = "";
 		for(i = 0 ; i < 20; i ++){
-			newSongs +=  " ♡ " + arr[i].split('-')[0] + "&nbsp&nbsp";
+			newSongs +=  "<p style=\"display:inline; font-size:16px;color:#85929E; \";>" + " ○ " + arr[i].split('-')[0] +  "&nbsp<p style=\"display:inline; font-size:13px; color:#D6DBDF; \";>" + arr[i].split('-')[1] + "</br>";
 			//+ "(" + arr[i].split('-')[1] + ")  "  
 		}
 
@@ -207,7 +208,7 @@
 
 
 					//歌名的字体字号 & 歌手的字体颜色 在这里设置
-					temp += "<p style=\"display:inline;font-weight:400; font-size:12px;\">" + _title + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:12px; color:#c2c2d6;\">" + _singer ;
+					temp += "<p style=\"display:inline; line-height:2;color:#85929E;\">" + _title + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:13px; color:#D5DBDB;\">" + _singer ;
 					
 					
 					//----------------添加标签----------------------
@@ -233,7 +234,7 @@
 
 				});
 
-				arrToStr += temp + "<br>";
+				arrToStr += temp;
 				temp = "";	
 			};
 			// console.log("arrToStr = " + arrToStr);
@@ -284,9 +285,9 @@
 				}else{ //如果歌手不在array里
 
 					if ( i == 0 ){//歌手分类下歌手的颜色
-						str.push("<p style=\"font-size:16px; font-weight:bold;color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block; margin-top:7; margin-bottom:0;\">" + singerStr + " </p>" ); //加入str 没有回车 
+						str.push("<p style=\"font-size:16px; font-weight:bold;color:#D5DBDB; height:25px; width:150px; padding:0; display:inline-block; margin-top:7; margin-bottom:0;\">" + singerStr + " </p>" ); //加入str 没有回车 
 					}else{
-						str.push("<br><p style=\"font-size:16px; font-weight:bold; color:#d1d1e0; height:25px; width:150px; padding:0; display:inline-block; margin-top:18px; margin-bottom:0; \">" + singerStr + " </p>" ); //加入str 回车~
+						str.push("<br><p style=\"font-size:16px; font-weight:bold; color:#D5DBDB; height:25px; width:150px; padding:0; display:inline-block; margin-top:18px; margin-bottom:0; \">" + singerStr + " </p>" ); //加入str 回车~
 					} 
 
 					if(str.toString().includes(nextSingerStr) == false){
@@ -295,7 +296,7 @@
 						titleStr = sortedBySinger[i].split('-')[0].toString() + "  /  " ;
 					}
 
-					str[i] +=  "<p style=\"line-height:2;margin:0;padding:0;\">" + titleStr + "  ";
+					str[i] +=  "<p style=\"line-height:2;margin:0;padding:0;color:#85929E\">" + titleStr + "  ";
 
 				}
 			}
@@ -724,10 +725,19 @@ var text = "<div style=\"width:95%; margin-right:0;\"><img style=\"height: 80px;
 	}
 	}
 
-
+function hasDuplicates(arr) {
+  let findDuplicates = [];
+  findDuplicates = arr =>
+    arr.filter((item, index) => arr.indexOf(item) != index);
+  console.log(findDuplicates(arr).length);
+  if (findDuplicates(arr).length > 0) {
+    window.alert("歌单重复拉~!\n" + findDuplicates(arr));
+  }
+}
 ////////////////////////////////////// onLoad ///////////////////////////////////////////
 	function run(){
 		//modalOnLoad();
+		hasDuplicates(arr);
 		sortByTitle();
 		setContent();
 		// setSchedule();
