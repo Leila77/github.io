@@ -193,17 +193,19 @@ body{
 .block a#zhibojian {
 	
   font-size:40px;
-  color:white;
+  color:#85929E;
   font-weight: bold;
   background-color:#D6EAF8 ;
   width:50%;
   float:left;
   min-width:150px;
+  border-radius: 3px;
  
 }
 
 .block a#zhibojian:hover{
 	 background-color: lightpink;
+	 color:white;
 	 transition: .4s;
 
 	}
@@ -426,7 +428,7 @@ button{
 	
 	width:23%;
 	height:30px;
-	margin-bottom:13px;
+	margin:5px;
 	font-weight: bold;
 	border-radius: 4px;
 }

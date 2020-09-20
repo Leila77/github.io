@@ -51,6 +51,7 @@
 		var count = 0;
 		var total = arr.length;
 		var counter = setInterval(timer, 2);
+		var text = "";
 
 		function timer(){
 
@@ -61,14 +62,13 @@
 		        
 		        setTimeout(function(){
 		            count = total;
-		            document.getElementById("counter").innerHTML= "<p>已收录</p>" + "</br>" + "<div style=\"font-size:40px; display:block;width:100%;\">" + count + "</div>" + "</br>"+"<p>首歌曲</p>";
-		   
+		            document.getElementById("counter").innerHTML= text;
 		        }, 800);
 
 		     return;
-		  }
-
-		 document.getElementById("counter").innerHTML = "<p>已收录</p>" + "</br>" + "<div style=\"font-size:40px;display:block;width:100%;\">" + count + "</div>" + "</br>"+"<p>首歌曲</p>";
+		    }
+			text = "<p style=\"color:white;\">已收录</p>" + "</br>" + "<div style=\"font-size:40px;display:block;width:100%;\">" + count + "</div>" + "</br>"+"<p style=\"color:white;\">首歌曲</p>";
+		    document.getElementById("counter").innerHTML = text;
 		}
 	    
 	}
