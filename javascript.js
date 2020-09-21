@@ -5,7 +5,7 @@
 
 
 	// var divider = " — ";//网站上显示的分隔符
-	var divider = "";//网站上显示的分隔符
+	var divider = "  ";//网站上显示的分隔符
 	var arr = originalList.split('	');//原始歌单文件分割为array
 	console.log(arr);
 
@@ -67,7 +67,7 @@
 
 		     return;
 		    }
-			text = "<p style=\"color:white;\">已收录</p>" + "</br>" + "<div style=\"font-size:40px;display:block;width:100%;font-family:Heiti;\">" + count + "</div>" + "</br>"+"<p style=\"color:white;\">首歌曲</p>";
+			text = "<div style=\"display:block;color:white;font-size:19px;\">已收录曲目</p>" + "<div style=\"font-size:90px;font-weight:bold;display:block;width:100%;font-family:Heiti;\">" + count + "</div>";
 		    document.getElementById("counter").innerHTML = text;
 		}
 	    
@@ -96,7 +96,7 @@
 
 		var newSongs = "";
 		for(i = 0 ; i < 20; i ++){
-			newSongs +=  "<p style=\"display:inline; font-size:16px;color:#85929E; \";>" + " ○ " + arr[i].split('-')[0] +  "&nbsp<p style=\"display:inline; font-size:13px; color:#D6DBDF; \";>" + arr[i].split('-')[1] + "</br>";
+			newSongs +=  "<p style=\"display:inline; font-size:15px;color:#85929E; \";>" + " ○ " + arr[i].split('-')[0] +  "&nbsp<p style=\"display:inline; font-size:13px; color:#D6DBDF; \";>" + arr[i].split('-')[1] + "</br>";
 			//+ "(" + arr[i].split('-')[1] + ")  "  
 		}
 
@@ -189,7 +189,7 @@
 				letter = segList[i].letter.toUpperCase();
 				
 				// 歌名排序首字母的颜色
-				arrToStr += "<p style=\"font-size:25px; color: #d1d1e0; width:60px; font-weight:1000; text-align:left;margin:7px 0; \">" + letter + "</p>" ;
+				arrToStr += "<p style=\"font-size:36px; color: #85929E; width:60px; font-weight:1000; text-align:left; margin:0;\">" + letter + "</p>" ;
 				
 
 
@@ -208,7 +208,7 @@
 
 
 					//歌名的字体字号 & 歌手的字体颜色 在这里设置
-					temp += "<p style=\"display:inline; line-height:2;color:#85929E;\">" + _title + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:13px; color:#D5DBDB;\">" + _singer ;
+					temp += "<p style=\"display:inline; line-height:2;color:#85929E;font-size:17px;font-family:Microsoft YaHei;\">" + _title + "</p>" + divider + "<p style=\"display:inline; margin:0;font-size:13px; color:#D5DBDB;\">" + _singer ;
 					
 					
 					//----------------添加标签----------------------
@@ -285,9 +285,9 @@
 				}else{ //如果歌手不在array里
 
 					if ( i == 0 ){//歌手分类下歌手的颜色
-						str.push("<p style=\"font-size:16px; font-weight:bold;color:#D5DBDB; height:25px; width:150px; padding:0; display:inline-block; margin-top:7; margin-bottom:0;\">" + singerStr + " </p>" ); //加入str 没有回车 
+						str.push("<p style=\"font-size:23px; font-weight:bold;color:#D5DBDB; height:25px; width:180px; padding:0; display:inline-block; margin-top:7; margin-bottom:0;font-family:Heiti;\">" + singerStr + " </p>" ); //加入str 没有回车 
 					}else{
-						str.push("<br><p style=\"font-size:16px; font-weight:bold; color:#D5DBDB; height:25px; width:150px; padding:0; display:inline-block; margin-top:18px; margin-bottom:0; \">" + singerStr + " </p>" ); //加入str 回车~
+						str.push("<br><p style=\"font-size:23px; font-weight:bold; color:#D5DBDB; height:25px; width:180px; padding:0; display:inline-block; margin-top:18px; margin-bottom:0;font-family:Heiti; \">" + singerStr + " </p>" ); //加入str 回车~
 					} 
 
 					if(str.toString().includes(nextSingerStr) == false){
@@ -296,7 +296,7 @@
 						titleStr = sortedBySinger[i].split('-')[0].toString() + "  /  " ;
 					}
 
-					str[i] +=  "<p style=\"line-height:2;margin:0;padding:0;color:#85929E\">" + titleStr + "  ";
+					str[i] +=  "<p style=\"line-height:2;margin:0;padding:0;color:#85929E;font-size:14px;\">" + titleStr + "  ";
 
 				}
 			}

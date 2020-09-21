@@ -13,6 +13,13 @@
 
 }
 
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 div#preload {
 	display:none;
 }
@@ -21,44 +28,64 @@ body{
 	background-color: #dce7ef;/*背景颜色*/
 	background-image:url("bg3.jpg");
 	background-size: 100%;
-	width:95%;
-	min-width:96vw;
 	height:100vh;
-
-	
-/*	background-image:url("bg2.png"),url("guitar.jpg");
-	background-repeat:no-repeat;
-	background-size:100%;
-	background-position:center;*/
+	width:90vw;
 
 	letter-spacing: 1px;
 	margin: auto;
-
-
 }
 
-.row{
-	display:inline-block;
-	float:left;
-	width:20%;
-	height: 93vh;
-	margin:15px;
-	min-width: 300px;
-	
+
+/*----------------------------responsive grid-----------------------*/
+
+/*for mobile phones*/
+[class*="col-"] {
+  width:100%;
+  float: left;
+  padding: 15px;
 
 }
+.col-m-1{width:45%;}
+.col-m-6{width:47%;}
 
-.widerow{
-	display:inline-block;
-	width:50%;
-	height: 93vh;
-	
-	float:left;
 
-	margin:15px;
-	min-width: 300px;
 
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 50%;}
+  .col-s-2 {width: 50%;}
+  .col-s-3 {width: 100%;}
+  .col-s-4 {width: 100%;}
+  .col-s-5 {width: 100%;}
+  .col-s-6 {width: 100%;}
+  .col-s-7 {width: 100%;}
+  .col-s-8 {width: 100%;}
+  .col-s-9 {width: 100%;}
+  .col-s-10 {width: 100%;}
+  .col-s-11 {width: 100%;}
+  .col-s-12 {width: 100%;}
 }
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+
+
+
+
 
 
 /*___________________________________________________*/
@@ -66,7 +93,7 @@ body{
 .tabrow {
  	text-align: center;
     list-style: none;
-    margin: 15px;
+    margin: 15px 0 auto auto;
     padding: 0;
     line-height: 28px;
     position: relative;
@@ -74,16 +101,16 @@ body{
 }
 .tabrow li {
 	height:5vh;
-	width:20%;
 	cursor: pointer;
 	font-weight: 600;
 	font-size: 20px;
 	float:left;
     margin: 0 5px;
     padding: 0 10px;
-    border:1px solid white;
+    border:none;
+    border-bottom:none;
     color:white;
-    background: lightblue;
+    background: #7FB3D5;
     display: inline-block;
     position: relative;
     z-index: 0;
@@ -94,6 +121,10 @@ body{
     display: flex;
 	justify-content: center;
     align-items: center;
+    text-align: center;
+
+    font-family:Heiti;
+
 }
 
 .tabrow li:hover{
@@ -107,9 +138,8 @@ body{
     background: white;
     color: #85929E;
     z-index: 2;
-    border-color:lightblue;
-    border-width: 3px;
-    border-bottom-color: white;
+    border:3px solid #85C1E9;
+    border-bottom: none;
 
 }
 
@@ -144,9 +174,8 @@ body{
 	width:100%;
 	height:210px;
 
-	font-size: 30px;
+	
 	font-family:STXihei;
-
 	margin-top: 15px auto;
 	
 
@@ -158,17 +187,12 @@ body{
 
 
 
-.block {
+.column {
 	
-  
-  color: #333333;
   float:left;
   margin:15px auto;
-
-  width: 100%;
-  height:200px;
-  min-width:300px;
-
+  height:93%;
+ 
  }
 
 
@@ -184,9 +208,7 @@ body{
   background-color: inherit;
   color: #333333;
   text-decoration: none; 
-  width:100%;
   height:100%;
-  min-width:300px;
 
   
 
@@ -194,21 +216,29 @@ body{
 
 }
 
-.block a#zhibojian {
+.center{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#zhibojian {
 	
   font-size:40px;
   font-family: Heiti;
   color:#85929E;
   font-weight: bold;
   background-color:#D6EAF8 ;
-  width:50%;
-  float:left;
-  min-width:140px;
   border-radius: 3px;
+  float:left;
+  margin:15px auto;
+  height:200px;
+
  
 }
 
-.block a#zhibojian:hover{
+#zhibojian:hover{
 	 background-color: lightpink;
 	 color:white;
 	 transition: .4s;
@@ -217,45 +247,24 @@ body{
 
 
 
-.block a.logo {
+a.logo {
 	color:white;
 	background-color:#F7DC6F;
 	width:100%;
   font-size: 40px;
   font-weight: 700;
   text-align: right;
-  min-width:300px;
   font-family: Heiti;
-
- 
- 
+  margin:15px auto;
 }
 
 
-.block a:hover {
+a.logo:hover {
   background-color: lightblue;
   color: white;
   transition: .4s;
   border-style: none;
 }
-
-
-
-
-/*.header #liveSchedule{
-	border-style: solid;
-	border-color:#333333;
-	border-width:1px;
-
-	font-size: 10px;
-	color:#333333;
-	margin-bottom: 0;
-
-}*/
-
-
-
-
 
 
 
@@ -332,17 +341,7 @@ H1{
 	letter-spacing: 3px;
 }
 
-.newContainer H3{ //新增 标题
-	font-size: 12px;
-	line-height: 1.1;
-	color:#333333;
-	background-color:inherit;
-	display:inline-block;
-	padding:4px;
-	margin:2px;
-	border-radius: 2px;
-	letter-spacing: 2px;
-}
+
 
 #suisuinian{
 	font-size: 12px;
@@ -351,13 +350,13 @@ H1{
 
 }
 
-p{
+#footer{
 	font-size:15px;
-	width:95%;
 	color:grey;
-	line-height:1.2;
-	padding-left: 4px;
-	padding-right:4px;
+	width:100%;
+	background-color:white;
+	opacity:0.8;
+	border:3px solid pink;
 }
 
 
@@ -378,11 +377,11 @@ a:hover {
 
 #newContainer{
 	background-color: white;
-	opacity: 0.9;
+	opacity: 0.95;
 	width: 100%;
 	float:left;
 
-	margin: 10px auto;
+	margin:0 auto;
 	border: 3px solid #85C1E9;
 
 	text-align: center;
@@ -391,9 +390,14 @@ a:hover {
 	position:relative;
 	overflow: hidden;
 
-
 }
 
+#newContainer H3{
+	margin-top:0;
+	font-family:Heiti;
+	font-size:16px;
+	font-weight:bold;
+}
 #new{
 	font-size:16px;
 	color:grey; /*新歌字体颜色*/
@@ -411,6 +415,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position:bottom right;
 	background-size:200px;
+	opacity: 0.95;
 
 	
 	padding: 20px;
@@ -454,10 +459,11 @@ button:hover{
 }
 
 #copy{
-	width:45%;
-	min-width: 140px;
-	
+
 	height:100%;
+	float:left;
+    margin:15px auto;
+    height:200px;
 	
 	font-size:16px;
 	font-family: Heiti;
@@ -466,11 +472,8 @@ button:hover{
 
 #search{
 	height:80px;
-	
 	width:100%;
 	margin:15px auto;
-	
-
 	background-color:white;
 	border-radius: 4px;
 	border: 3px solid #85C1E9;
@@ -494,50 +497,7 @@ button:hover{
 	border-style: dotted;
 }
 
-#pendingSongList{
-	background-color: white;
-	opacity:0.8;
-	color:grey;
-	width:95%;
-	height:120px;
-	border-style: dotted;
-	margin:auto;
-	font-size:10px;
-}
 
-#leftInputGroup{
-	width:100%;
-	
-
-}
-
-#leftInputGroup input{
-	width:90%;
-	height:20px;
-	margin:2px;
-}
-
-#pendingContainer H3{
-	padding-left:6px;
-	line-height: 0.3;
-}
-
-
-
-#addToPending{
-	width:90%;
-	height:110%;
-
-	margin:auto;
-	margin-left:2px;
-}
-
-
-.alignMiddle{
-	display: inline;
-	width:100%;
-
-}
 
 
 
@@ -569,7 +529,7 @@ button:hover{
 #schedule{
 	margin:50px auto;
 	width:50%;
-	min-width:400px;
+
 	background-color:white;
 	height:70vh;
 	border-radius: 4px;
