@@ -332,6 +332,8 @@ function search() {
     return;
   }
 
+  alert +=
+    '<div style="font-size:25px;font-family:Heiti;color:#D5DBDB;margin:7px auto; ">会唱耶会唱耶~ ↓</div>';
   arr.forEach(function (arr) {
     titleStr = arr.split("-")[0];
     _titleStr = arr.split("-")[0].toLowerCase();
@@ -342,7 +344,14 @@ function search() {
       _titleStr.includes(keywords) == true ||
       _singerStr.includes(keywords) == true
     ) {
-      alert += titleStr + " — " + singerStr + "\n";
+      alert +=
+        '<div style="color:#85929E; font-size:15px;display:inline;">' +
+        titleStr +
+        "</div> " +
+        divider +
+        '<div style="color:#D5DBDB; font-size:12px;display:inline;">' +
+        singerStr +
+        "</br>";
     }
   });
 
@@ -350,9 +359,11 @@ function search() {
     str.toString().toLowerCase().includes(keywords.toString().toLowerCase()) !=
     true
   ) {
-    alert = "啊咧~没有相关资料~";
+    window.alert("啊咧~没有相关资料~");
+    return;
   }
-  window.alert(alert);
+
+  showModal(alert);
 }
 
 //////////////////////////////// 添加歌曲到pending list //////////////////////////////////////
@@ -646,7 +657,7 @@ function pySegSort(arr) {
 
 /////////////////////// 启动弹出窗口 ///////////////////////
 
-function showModal() {
+function showModal(alert) {
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -665,12 +676,14 @@ function showModal() {
     modal.style.display = "none";
   };
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
+  document.getElementById("result").innerHTML = alert;
+
+  //   // When the user clicks anywhere outside of the modal, close it
+  //   window.onclick = function (event) {
+  //     if (event.target == modal) {
+  //       modal.style.display = "none";
+  //     }
+  //   };
 }
 
 function hasDuplicates(arr) {
