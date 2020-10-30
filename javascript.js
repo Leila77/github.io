@@ -400,102 +400,7 @@ function addToPending() {
   }
 }
 
-/////////////////////////////// 给老糖的魔法按钮 /////////////////////////////
-function magic() {
-  var temptitle = "";
-  var title = "";
-  var i = 0;
-  var length = arr.length;
-  var segList = pySegSort(arr);
-  var letter = "";
 
-  for (i = 0; i < segList.length; i++) {
-    letter = segList[i].letter.toUpperCase();
-    title +=
-      '<div style="border-radius:15px; font-size: 17px; color: #373854; background-color:#d2d4dc; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;">' +
-      letter +
-      "</div>";
-
-    var idx = 0;
-
-    segList[i].data.forEach(function (arr) {
-      if (idx === segList[i].data.length - 1) {
-        temptitle += arr.split("-")[0];
-        console.log("idx === 最后一个");
-      } else {
-        temptitle += arr.split("-")[0] + " 、 ";
-        idx++;
-      }
-    });
-
-    title +=
-      '<p style="display:inline; line-height:2;">' + temptitle + "</p><br>";
-    temptitle = "";
-  }
-
-  var text =
-    '<div style="opacity:0.9; overflow:auto; height:220px; width:98%; background-color:#373854; color:#d2d4dc; font-size:13px; margin:auto; padding:0px 20px; line-height: 1.5;"><div><p style="display:inline-block; color:#f8f8fa; font-size:15px; width:50%;"><strong>▁ ▂ ▃ ▅ ▆ ▇ &nbsp;&nbsp;歌单持续更新中</strong></p><a href="https://leila77.github.io/github.io/" style="margin-right:10px; border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align: center; display:inline-block; background-color:#493267; color:#7bb3ff; text-decoration:none; font-size:11px;"> 网页版歌单</a></p><a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=442f36be207473ecd3a95b0540d9e194cd579d4597af4df75fba77946bc1cbcc" style="border-radius:20px; border:2px solid #7bb3ff; width:180px; padding:2px; text-align:center; display:inline-block; background-color:#493267; color:#7bb3ff; font-size:10px;">群951162656</a></div>' +
-    title +
-    '</div>\
-		<p><img style="height:80px; margin:auto; display:block;" src="https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp" /></p>\
-		<p style="color:#373854; text-align:center; font-size:13px;">感谢大家的陪伴和礼物( *¯ ³¯*)♡ㄘゅ</p>';
-
-  var dummy = document.createElement("input");
-  document.body.appendChild(dummy);
-  dummy.setAttribute("value", text);
-  dummy.select();
-  document.execCommand("copy");
-  document.body.removeChild(dummy);
-  alert("复制成功惹~");
-}
-
-//////////////////////////////   旧的一号魔法按钮   /////////////////////////////////
-
-// function magic(){
-// 	var temptitle = "";
-// 	var title ="";
-// 	var i = 0;
-// 	var length = arr.length;
-// 	var segList = pySegSort(arr);
-// 	var letter = "";
-
-// 	for(i = 0; i < segList.length; i ++){
-
-// 		letter = segList[i].letter.toUpperCase();
-// 		title += "<div style=\"font-size: 17px; color: #333333; background-color: #f2f2f2; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;\">" + letter  +"</div>" ;
-
-// 		var idx = 0 ;
-
-// 		segList[i].data.forEach(function(arr){
-
-// 			if(idx === segList[i].data.length - 1){
-// 				temptitle += arr.split('-')[0];
-// 			console.log("idx === 最后一个");
-
-// 			}else{
-// 				temptitle += arr.split('-')[0] + " 、 " ;
-// 				idx ++;
-// 			}
-// 		});
-
-// 		title += "<p style=\"display:inline; line-height:2;\">" + temptitle + "</p><br>";
-// 		temptitle = "";
-
-// 	};
-
-// 	var text = "<div style=\"overflow: auto; height: 220px; width: 98%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;\"><p style=\"color: #333333; background-color: #f2f2f2; font-size: 15px; padding-left: 20px; display:block; width:180px;\"><strong>❤&nbsp;歌单持续更新中&hellip;&hellip;</strong></p>" + title +"</div>\
-// 	<p><img style=\"height: 80px; margin: auto; display: block;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></p>\
-// 	<p style=\"text-align: center;font-size:10px;\">感谢大家的陪伴 &gt; &lt;</p><p style=\"text-align:center;display:block;color:#333333;font-size:10px;margin-bottom:15px;\">群 951162656</p><a href=\"https://leila77.github.io/github.io/\";style=\"text-align: center; display:block; margin:auto; width:100px;background-color:#333333;color:#f2f2f2;text-decoration:none;font-weight:bold;font-size: 11px;padding:2px 2px; font-size:10px;\">网页版歌单戳我</a>";
-
-// 	var dummy = document.createElement("input");
-// 	document.body.appendChild(dummy);
-// 	dummy.setAttribute('value', text);
-// 	dummy.select();
-// 	document.execCommand("copy");
-// 	document.body.removeChild(dummy);
-// 	alert("复制成功惹~");
-
-// }
 
 ////////////////////////////// 魔法2号 /////////////////////////
 function magic2() {
@@ -509,7 +414,7 @@ function magic2() {
   for (i = 0; i < segList.length; i++) {
     letter = segList[i].letter.toUpperCase();
     title +=
-      '<div style="font-size: 17px; color: #333333; background-color: #f2f2f2; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;">' +
+      '<div style="font-size: 17px; color: #fbfaf8; background-color: #7ca0c0; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;">' +
       letter +
       "</div>";
 
@@ -520,7 +425,7 @@ function magic2() {
         temptitle += arr.split("-")[0];
         console.log("idx === 最后一个");
       } else {
-        temptitle += arr.split("-")[0] + " 、 ";
+        temptitle += arr.split("-")[0] + "  ·  ";
         idx++;
       }
     });
@@ -530,20 +435,15 @@ function magic2() {
     temptitle = "";
   }
 
-  // var text = "<div style=\"display:block; width:100%;margin:auto;\"><div style=\"display:inline-block; float:left; width:10%;\"><img style=\"height: 80px; display: inline;\" src=\"https://i0.hdslb.com/bfs/face/ab805e58ea92ec4aa84e6c734afb332cd3340c87.jpg@100Q.webp@128w_128h_100Q_1c.webp\" /></div>\
-  // <div style=\"display:inline-block; float:left; width:80%;\"><a target=\"_blank\" href=\"//shang.qq.com/wpa/qunwpa?idkey=2082e347d9daf8ea5568575ea9ffee772ddecbf35093a3ef860d41efccfc3233\" style=\"text-align:left;display:block;color:#333333;font-size:15px;\">欢迎加群→951162656</a>\
-  // <a href=\"https://leila77.github.io/github.io/\";style=\"text-align: center; display:block; width:30%;background-color:#333333;color:#f2f2f2;text-decoration:none;font-weight:bold;font-size:15px;\">网页版歌单</a>\
-  // <p style=\"text-align:left; font-size:15px; display:block;width:60%;\">♡感谢大家的礼物和陪伴♡</p></div></div>\
-  // <div style=\"display:block; position:absolute; top: 200px;width: 98%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;\">" + title +"</div>";
 
   var text =
-    '<div style="width:95%; margin-right:0;"><img style="height: 80px; display: block; margin:1px auto;" src="http://i1.hdslb.com/bfs/face/797eab41223490ec6d1acba6b93ac47d5dce8ade.jpg" />\
-		<div style="display:block; margin:auto; text-align: center;"><a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=2082e347d9daf8ea5568575ea9ffee772ddecbf35093a3ef860d41efccfc3233" style="margin:auto;width:20%;margin:auto;text-align:center;display:inline-block;background-color:#333333;color:#f2f2f2;text-decoration:none;font-size:13px;">直播通知群951162656</a>\
-		<a href="https://leila77.github.io/github.io/";style="margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;background-color:#333333;color:#f2f2f2;text-decoration:none;font-size:13px;">网页版歌单</a></div>\
-		<p style="margin:0 auto;text-align:center; font-size:13px; display:block;">♡感谢大家的礼物和陪伴♡</p>\
-		<p style="margin:auto;text-align:center; font-size:10px; display:block;">v v v 以下是不太常更新的歌单 v v v</p>\
-		<div style="display:block; position:absolute; top:140px; width:95%; background-image: linear-gradient(to bottom right, #333333,#666666); color: #f2f2f2; font-size: 13px; margin: auto; padding: 0px 20px; line-height: 1.5;opacity:0.9;">' +
-    title +
+    '<div style="width:98%; height:300px; margin-right:auto; letter-spacing: 2px;">\
+		<div style="display:block; margin: auto; text-align: center;">\
+    <a href="https://leila77.github.io/github.io/";style="margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;background-color:#c6939b;color:#fbfaf8;text-decoration:none;font-size:13px; padding:10px;float:right;">歌单网站戳</a>\
+    <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=2082e347d9daf8ea5568575ea9ffee772ddecbf35093a3ef860d41efccfc3233" style="margin:auto;width:20%;margin:auto;text-align:center;display:inline-block;background-color:#FFC87C;color:#fbfaf8; padding:10px; text-decoration:none;font-size:13px;float:right;">通知群 951162656</a></div>\
+    <div style="background-color:#9bc693;margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;color:#fbfaf8;text-decoration:none;font-size:13px; padding:10px;float:right;">感谢大家的收听 ♡</div>\
+		<div style="display:block; position:absolute; z-index:-1; top:20px; background-color:#7ca0c0;color: #fbfaf8; font-size: 13px; margin: auto; padding:20px; line-height: 1.5;">'
+    + title +
     "</div></div>";
 
   var dummy = document.createElement("input");
