@@ -414,7 +414,7 @@ function magic2() {
   for (i = 0; i < segList.length; i++) {
     letter = segList[i].letter.toUpperCase();
     title +=
-      '<div style="font-size: 17px; color: #fbfaf8; background-color: #7ca0c0; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin-right: 5px; margin-top:20px; text-align: center;">' +
+      '<div style="font-size: 17px; color: #fbfaf8; background-color: #7ca0c0; width: 20px; font-weight: bold; display: inline-block; padding: 0 5px; margin:20px 5px 0 0; text-align: center;">' +
       letter +
       "</div>";
 
@@ -435,13 +435,12 @@ function magic2() {
     temptitle = "";
   }
 
-
+// <div style="display:block; margin: auto; text-align: center;">\
+//     <a href="https://leila77.github.io/github.io/";style="margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;background-color:#c6939b;color:#fbfaf8;text-decoration:none;font-size:13px; padding:10px;float:right;">歌单网站戳</a>\
+//     <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=2082e347d9daf8ea5568575ea9ffee772ddecbf35093a3ef860d41efccfc3233" style="margin:auto;width:20%;margin:auto;text-align:center;display:inline-block;background-color:#FFC87C;color:#fbfaf8; padding:10px; text-decoration:none;font-size:13px;float:right;">通知群 951162656</a></div>\
+//     <div style="background-color:#9bc693;margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;color:#fbfaf8;text-decoration:none;font-size:13px; padding:10px;float:right;">感谢大家的收听 ♡</div>\
   var text =
     '<div style="width:98%; height:300px; margin-right:auto; letter-spacing: 2px;">\
-		<div style="display:block; margin: auto; text-align: center;">\
-    <a href="https://leila77.github.io/github.io/";style="margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;background-color:#c6939b;color:#fbfaf8;text-decoration:none;font-size:13px; padding:10px;float:right;">歌单网站戳</a>\
-    <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=2082e347d9daf8ea5568575ea9ffee772ddecbf35093a3ef860d41efccfc3233" style="margin:auto;width:20%;margin:auto;text-align:center;display:inline-block;background-color:#FFC87C;color:#fbfaf8; padding:10px; text-decoration:none;font-size:13px;float:right;">通知群 951162656</a></div>\
-    <div style="background-color:#9bc693;margin:auto;width:20%;margin:auto;text-align: center; display:inline-block;color:#fbfaf8;text-decoration:none;font-size:13px; padding:10px;float:right;">感谢大家的收听 ♡</div>\
 		<div style="display:block; position:absolute; z-index:-1; top:20px; background-color:#7ca0c0;color: #fbfaf8; font-size: 13px; margin: auto; padding:20px; line-height: 1.5;">'
     + title +
     "</div></div>";
